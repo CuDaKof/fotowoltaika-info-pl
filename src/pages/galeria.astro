@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Galeria realizacji" description="Zobacz nasze wybrane realizacje instalacji fotowoltaicznych">
+  <section class="py-12">
+    <h1 class="text-3xl font-bold mb-4">Galeria realizacji</h1>
+    <p class="text-gray-600 mb-6">Poniżej przedstawiamy wybrane realizacje instalacji fotowoltaicznych i projektów elektrycznych. Dodaj tutaj swoje zdjęcia w folderze <code>public/galeria</code>.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="/galeria/przyklad-1.jpg" alt="Przykładowa realizacja 1" class="w-full h-auto rounded-lg shadow" />
+      <img src="/galeria/przyklad-2.jpg" alt="Przykładowa realizacja 2" class="w-full h-auto rounded-lg shadow" />
+      <img src="/galeria/przyklad-3.jpg" alt="Przykładowa realizacja 3" class="w-full h-auto rounded-lg shadow" />
+    </div>
+  </section>
+</BaseLayout>

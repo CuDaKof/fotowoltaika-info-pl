@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.astro";
+import CalendarEmbed from "../components/CalendarEmbed.astro";
+---
+<BaseLayout title="Kontakt" description="Skontaktuj się z nami – fotowoltaika.info.pl">
+  <section class="py-12">
+    <h1 class="text-3xl font-bold mb-4">Skontaktuj się z nami</h1>
+    <p class="text-gray-600 mb-6">Jesteśmy do Twojej dyspozycji codziennie od 7:00 do 21:00. Wypełnij formularz lub zadzwoń, aby umówić spotkanie.</p>
+    <div class="max-w-xl mx-auto">
+      <ContactForm />
+    </div>
+    <!-- Opcjonalny kalendarz spotkań: wstaw swój kalendarz korzystając z komponentu CalendarEmbed -->
+    <CalendarEmbed />
+  </section>
+</BaseLayout>

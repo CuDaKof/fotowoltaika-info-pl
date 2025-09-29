@@ -1,0 +1,152 @@
+---
+// Komponent kalkulatora wstępnej wyceny fotowoltaiki
+---
+<div class="bg-white rounded-lg shadow-xl p-6" id="kalkulator">
+  <h3 class="text-2xl font-bold mb-4">Szybka wycena instalacji PV</h3>
+  <form id="calc-form" class="space-y-4">
+    <div>
+      <label for="consumption" class="block text-sm font-medium text-gray-700 mb-1">
+        Roczne zużycie energii (kWh)
+      </label>
+      <input
+        type="number"
+        id="consumption"
+        name="consumption"
+        min="1000"
+        max="100000"
+        value="4000"
+        step="100"
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"
+        required
+      />
+      <p class="text-xs text-gray-500 mt-1">Sprawdź na fakturze za rok lub średnia 300 kWh/mc</p>
+    </div>
+    
+    <div>
+      <label for="type" class="block text-sm font-medium text-gray-700 mb-1">Rodzaj obiektu</label>
+      <select
+        id="type"
+        name="type"
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"
+      >
+        <option value="dom">Dom jednorodzinny</option>
+        <option value="firma">Firma / działalność</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">Magazyn energii?</label>
+      <div class="flex gap-4">
+        <label class="flex items-center">
+          <input type="radio" name="battery" value="0" checked class="mr-2" />
+          <span class="text-sm">Bez magazynu</span>
+        </label>
+        <label class="flex items-center">
+          <input type="radio" name="battery" value="1" class="mr-2" />
+          <span class="text-sm">Z magazynem</span>
+        </label>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition"
+    >
+      Oblicz wycenę
+    </button>
+  </form>
+
+  <div id="calc-result" class="mt-6 hidden">
+    <div class="border-t pt-4">
+      <h4 class="font-semibold mb-3">Wstępna wycena:</h4>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-gray-700">Zalecana moc:</span>
+          <span class="font-bold text-xl" id="result-power">—</span>
+        </div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-gray-700">Liczba paneli:</span>
+          <span class="font-bold" id="result-panels">—</span>
+        </div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-gray-700">Roczna produkcja:</span>
+          <span class="font-bold" id="result-production">—</span>
+        </div>
+        <div class="border-t border-blue-200 mt-3 pt-3">
+          <div class="flex justify-between items-center">
+            <span class="text-gray-700">Szacunkowy koszt:</span>
+            <span class="font-bold text-2xl text-blue-600" id="result-price">—</span>
+          </div>
+          <p class="text-xs text-gray-600 mt-2">
+            *Cena orientacyjna z montażem. Dokładna wycena po audycie.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-blue-200">
+          <div class="flex justify-between items-center text-sm">
+            <span class="text-gray-700">Oszczędność rocznie:</span>
+            <span class="font-semibold text-green-600" id="result-savings">—</span>
+          </div>
+          <div class="flex justify-between items-center text-sm mt-1">
+            <span class="text-gray-700">Zwrot inwestycji (ROI):</span>
+            <span class="font-semibold" id="result-roi">—</span>
+          </div>
+        </div>
+      </div>
+      <a
+        href="/kontakt"
+        class="block w-full text-center bg-black text-white font-semibold py-3 rounded-lg mt-4 hover:bg-gray-800 transition"
+      >
+        Umów dokładny audyt 0 zł
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('calc-form') as HTMLFormElement;
+  const result = document.getElementById('calc-result');
+  
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const consumption = parseInt((document.getElementById('consumption') as HTMLInputElement).value);
+    const type = (document.getElementById('type') as HTMLSelectElement).value;
+    const battery = (document.querySelector('input[name="battery"]:checked') as HTMLInputElement).value === '1';
+    
+    // Obliczenia
+    const power = Math.ceil(consumption / 1000); // kWp
+    const panels = Math.ceil(power / 0.4); // ~400W panel
+    const production = power * 1000; // ~1000 kWh/kWp rocznie
+    
+    // Cena za kW w zależności od mocy (ekonomia skali)
+    let pricePerKw = power <= 5 ? 4400 : power <= 10 ? 4200 : 4000;
+    if (type === 'firma' && power > 20) pricePerKw = 3800;
+    
+    let totalPrice = power * pricePerKw;
+    
+    // Dodaj magazyn energii
+    if (battery) {
+      const batterySize = Math.ceil(power * 1.5); // 1.5 kWh na 1 kWp
+      totalPrice += batterySize * 2500; // ~2500 zł/kWh magazynu
+    }
+    
+    // Oszczędności (średnia 0,80 zł/kWh dla domu, 0,90 zł/kWh dla firmy)
+    const pricePerKwh = type === 'firma' ? 0.90 : 0.80;
+    const autokonsumpcja = battery ? 0.75 : 0.35; // % energii zużytej bezpośrednio
+    const savings = Math.round(production * autokonsumpcja * pricePerKwh);
+    
+    // ROI w latach
+    const roi = (totalPrice / savings).toFixed(1);
+    
+    // Wyświetl wyniki
+    (document.getElementById('result-power') as HTMLElement).textContent = `${power} kWp`;
+    (document.getElementById('result-panels') as HTMLElement).textContent = `${panels} szt.`;
+    (document.getElementById('result-production') as HTMLElement).textContent = `~${production.toLocaleString()} kWh`;
+    (document.getElementById('result-price') as HTMLElement).textContent = `${totalPrice.toLocaleString()} zł`;
+    (document.getElementById('result-savings') as HTMLElement).textContent = `~${savings.toLocaleString()} zł`;
+    (document.getElementById('result-roi') as HTMLElement).textContent = `${roi} lat`;
+    
+    result?.classList.remove('hidden');
+    result?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+</script>

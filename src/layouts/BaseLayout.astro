@@ -1,0 +1,147 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = "fotowoltaika.info.pl", description = "Profesjonalne usługi fotowoltaiczne dla domu i biznesu" } = Astro.props;
+
+// Import global styles. Astro bundles this into the final CSS.
+import "../styles.css";
+---
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    
+    <!-- Performance optimizations -->
+    <meta name="theme-color" content="#004f8c" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    
+    <!-- SEO -->
+    <link rel="canonical" href={`https://fotowoltaika.info.pl${Astro.url.pathname}`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={`https://fotowoltaika.info.pl${Astro.url.pathname}`} />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Structured data for local business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Fotowoltaika.info.pl",
+      "description": "Profesjonalne instalacje fotowoltaiczne dla domów i firm",
+      "url": "https://fotowoltaika.info.pl",
+      "telephone": "+48123456789",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Katowice",
+        "addressRegion": "Śląskie",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "50.2649",
+        "longitude": "19.0238"
+      },
+      "priceRange": "$$",
+      "areaServed": ["Katowice", "Gliwice", "Sosnowiec", "Tychy", "Dąbrowa Górnicza", "Zabrze", "Bielsko-Biała"]
+    }
+    </script>
+  </head>
+  <body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <header class="sticky top-0 z-50 bg-white shadow">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <a href="/" class="text-xl font-semibold text-primary-dark">fotowoltaika.info.pl</a>
+        <nav class="hidden md:flex space-x-4">
+          <a href="/dla-domu" class="text-gray-700 hover:text-primary-dark">Dla domu</a>
+          <a href="/dla-firm" class="text-gray-700 hover:text-primary-dark">Dla firm</a>
+          <a href="/realizacje" class="text-gray-700 hover:text-primary-dark">Realizacje</a>
+          <a href="/cennik-finansowanie" class="text-gray-700 hover:text-primary-dark">Cennik</a>
+          <a href="/poradnik" class="text-gray-700 hover:text-primary-dark">Poradnik</a>
+          <a href="/kontakt" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Kontakt</a>
+        </nav>
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 py-4 px-6">
+        <nav class="flex flex-col space-y-3">
+          <a href="/dla-domu" class="text-gray-700 hover:text-primary-dark">Dla domu</a>
+          <a href="/dla-firm" class="text-gray-700 hover:text-primary-dark">Dla firm</a>
+          <a href="/realizacje" class="text-gray-700 hover:text-primary-dark">Realizacje</a>
+          <a href="/cennik-finansowanie" class="text-gray-700 hover:text-primary-dark">Cennik</a>
+          <a href="/poradnik" class="text-gray-700 hover:text-primary-dark">Poradnik</a>
+          <a href="/kontakt" class="text-gray-700 hover:text-primary-dark">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="border-t border-gray-200 mt-12 py-8 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 mb-6">
+          <div>
+            <h4 class="font-semibold mb-3">Dla domu</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="/dla-domu/fotowoltaika" class="hover:text-primary-dark">Fotowoltaika</a></li>
+              <li><a href="/dla-domu/magazyn-energii" class="hover:text-primary-dark">Magazyny energii</a></li>
+              <li><a href="/dla-domu/modernizacja-pv" class="hover:text-primary-dark">Modernizacja PV</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-3">Dla firm</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="/dla-firm/fotowoltaika" class="hover:text-primary-dark">Fotowoltaika</a></li>
+              <li><a href="/dla-firm/kompensacja-mocy-biernej" class="hover:text-primary-dark">Kompensacja mocy</a></li>
+              <li><a href="/dla-firm/magazyny-energii" class="hover:text-primary-dark">Peak shaving</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-3">Informacje</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="/o-nas" class="hover:text-primary-dark">O nas</a></li>
+              <li><a href="/realizacje" class="hover:text-primary-dark">Realizacje</a></li>
+              <li><a href="/faq" class="hover:text-primary-dark">FAQ</a></li>
+              <li><a href="/poradnik" class="hover:text-primary-dark">Poradnik</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-3">Kontakt</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>Tel: 123 456 789</li>
+              <li>Email: kontakt@fotowoltaika.info.pl</li>
+              <li>Pon–Ndz: 7:00–21:00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-200 pt-4 text-sm text-gray-500 flex flex-wrap justify-between">
+          <p>© {new Date().getFullYear()} fotowoltaika.info.pl. Wszelkie prawa zastrzeżone.</p>
+          <div class="space-x-4">
+            <a href="/polityka-prywatnosci" class="hover:text-primary-dark">Polityka prywatności</a>
+            <a href="/regulamin" class="hover:text-primary-dark">Regulamin</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Mobile menu toggle
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

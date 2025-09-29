@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import ContactForm from "../components/ContactForm.astro";
+
+const services = [
+  {
+    title: "Instalacje fotowoltaiczne dla firm",
+    description: "Projektowanie i wykonanie systemów PV dla obiektów komercyjnych i przemysłowych."
+  },
+  {
+    title: "Magazyny energii i UPS",
+    description: "Rozwiązania magazynowania energii i zasilania awaryjnego dla biznesu."
+  },
+  {
+    title: "Kompensacja mocy biernej",
+    description: "Optymalizacja zużycia energii i redukcja kosztów poprzez instalację baterii kondensatorów."
+  },
+  {
+    title: "Modernizacja i automatyka",
+    description: "Integracja systemów PV z automatyką budynkową oraz modernizacja istniejących instalacji."
+  },
+  {
+    title: "Obsługa serwisowa",
+    description: "Stała opieka i serwis instalacji, aby zapewnić maksymalną wydajność i bezpieczeństwo."
+  }
+];
+---
+<BaseLayout title="Fotowoltaika dla firm" description="Usługi fotowoltaiczne i elektryczne dla przedsiębiorstw i instytucji.">
+  <section class="py-12">
+    <h1 class="text-3xl font-bold mb-4">Fotowoltaika dla firm</h1>
+    <p class="text-gray-600 mb-6">Pomagamy firmom zredukować koszty energii i zwiększyć efektywność poprzez nowoczesne instalacje fotowoltaiczne oraz usługi elektryczne.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map((service) => (
+        <ServiceCard {...service} />
+      ))}
+    </div>
+  </section>
+  <section class="py-12">
+    <h2 class="text-2xl font-semibold mb-4">Co zyskujesz?</h2>
+    <ul class="list-disc pl-6 space-y-2 text-gray-600">
+      <li>Zredukowane koszty energii elektrycznej</li>
+      <li>Wzmocnienie wizerunku firmy jako ekologicznej</li>
+      <li>Uniezależnienie od rosnących cen energii</li>
+      <li>Możliwość sprzedaży nadwyżek energii do sieci</li>
+    </ul>
+  </section>
+  <section id="kontakt" class="py-12">
+    <h2 class="text-2xl font-semibold text-center mb-6">Zadzwoń lub napisz</h2>
+    <div class="max-w-xl mx-auto">
+      <ContactForm />
+    </div>
+  </section>
+</BaseLayout>

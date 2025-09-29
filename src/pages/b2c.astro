@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import ContactForm from "../components/ContactForm.astro";
+
+const services = [
+  {
+    title: "Panele fotowoltaiczne dla domów",
+    description: "Indywidualne projektowanie i montaż instalacji PV na dachach i posesjach."
+  },
+  {
+    title: "Magazyny energii domowej",
+    description: "Dobór i instalacja baterii, które pozwolą Ci magazynować energię."
+  },
+  {
+    title: "Modernizacja instalacji",
+    description: "Doposażenie istniejących instalacji o nowe funkcje i zwiększenie wydajności."
+  },
+  {
+    title: "Oszczędność energii",
+    description: "Analiza zużycia energii i doradztwo w zakresie poprawy efektywności."
+  }
+];
+---
+<BaseLayout title="Fotowoltaika dla domu" description="Poznaj ofertę fotowoltaiki dla gospodarstw domowych.">
+  <section class="py-12">
+    <h1 class="text-3xl font-bold mb-4">Fotowoltaika dla domu</h1>
+    <p class="text-gray-600 mb-6">Energia słoneczna to niezależność, niższe rachunki i ekologiczny wybór. Oferujemy kompleksowe rozwiązania dla każdego domu.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map((service) => (
+        <ServiceCard {...service} />
+      ))}
+    </div>
+  </section>
+  <section class="py-12">
+    <h2 class="text-2xl font-semibold mb-4">Dlaczego warto?</h2>
+    <ul class="list-disc pl-6 space-y-2 text-gray-600">
+      <li>Niższe koszty energii elektrycznej</li>
+      <li>Niezależność od wzrostu cen prądu</li>
+      <li>Wykorzystanie ekologicznych źródeł energii</li>
+      <li>Możliwość uzyskania dofinansowania i ulg podatkowych</li>
+    </ul>
+  </section>
+  <section id="kontakt" class="py-12">
+    <h2 class="text-2xl font-semibold text-center mb-6">Skontaktuj się z nami</h2>
+    <div class="max-w-xl mx-auto">
+      <ContactForm />
+    </div>
+  </section>
+</BaseLayout>

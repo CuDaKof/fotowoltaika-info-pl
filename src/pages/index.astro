@@ -1,0 +1,309 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PriceCalculator from "../components/PriceCalculator.astro";
+import TrustBar from "../components/TrustBar.astro";
+import { MIASTA_SLASK } from "../data/miasta-slaskie";
+---
+<BaseLayout title="Fotowoltaika i elektryka — audyt w 48h | Śląsk i cała Polska" description="Instalacje PV, magazyny energii, elektryka dla domów i firm. Uprawnienia SEP, gwarancje 25 lat. Działamy na Śląsku. Audyt 0 zł*.">
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6bTAgNHYyaDJ2LTJoLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
+    
+    <div class="relative max-w-6xl mx-auto px-4 py-16 md:py-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Fotowoltaika i elektryka.<br/>
+            <span class="text-blue-200">Audyt na miejscu w 48h</span>
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 text-blue-100">
+            Projektujemy, montujemy i serwisujemy instalacje PV dla domów i firm. 
+            Realne oszczędności, gwarancje, bez zbędnego marketingu.
+          </p>
+          
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-lg">Uprawnienia SEP + ubezpieczenie OC 500 tys. zł</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-lg">Sprzęt premium: Deye, Sofar, Huawei, JA Solar, Longi</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-lg">Kontakt i wizyty: 7:00–21:00, 7 dni w tygodniu</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="/dla-domu" class="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg">
+              Dla domu
+            </a>
+            <a href="/dla-firm" class="inline-block px-8 py-4 bg-blue-800 text-white rounded-lg font-bold hover:bg-blue-900 transition border-2 border-white">
+              Dla firmy
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden md:block">
+          <PriceCalculator />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Calculator -->
+  <section class="md:hidden bg-gray-50 py-8 px-4">
+    <PriceCalculator />
+  </section>
+
+  <!-- Trust Bar -->
+  <TrustBar />
+
+  <!-- Korzyści B2C/B2B -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Kompleksowe rozwiązania energetyczne</h2>
+    
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-gradient-to-br from-blue-50 to-white border border-blue-200 rounded-lg p-8">
+        <h3 class="text-2xl font-bold mb-4">🏠 Dla domu</h3>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Fotowoltaika 3–10 kWp z magazynem energii</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Modernizacja istniejących instalacji PV</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Kompleksowa elektryka w nowych domach</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Serwis, przeglądy, monitoring 24/7</span>
+          </li>
+        </ul>
+        <a href="/dla-domu" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
+          Zobacz ofertę dla domu →
+        </a>
+      </div>
+
+      <div class="bg-gradient-to-br from-gray-50 to-white border border-gray-300 rounded-lg p-8">
+        <h3 class="text-2xl font-bold mb-4">🏭 Dla firmy</h3>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-2">
+            <span class="text-gray-700 font-bold">•</span>
+            <span>Fotowoltaika 20 kWp – 1 MWp</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-gray-700 font-bold">•</span>
+            <span>Kompensacja mocy biernej / niwelowanie energii biernej</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-gray-700 font-bold">•</span>
+            <span>Peak shaving — magazyny energii do obniżenia szczytów</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-gray-700 font-bold">•</span>
+            <span>Audyty energetyczne, pomiary, protokoły</span>
+          </li>
+        </ul>
+        <a href="/dla-firm" class="inline-block px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition">
+          Zobacz ofertę dla firm →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies / Realizacje -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Wybrane realizacje</h2>
+      <p class="text-center text-gray-600 mb-12">Ponad 200 instalacji na Śląsku i w całej Polsce</p>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <div class="h-48 bg-gradient-to-br from-orange-400 to-yellow-500 flex items-center justify-center">
+            <span class="text-6xl">☀️</span>
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-blue-600 font-semibold mb-2">DOM • KATOWICE</div>
+            <h3 class="font-bold text-lg mb-2">Dom 150 m² + magazyn</h3>
+            <p class="text-sm text-gray-600 mb-3">8 kWp + bateria 10 kWh<br/>Oszczędność: 7200 zł/rok</p>
+            <a href="/realizacje" class="text-blue-600 text-sm font-medium hover:underline">Zobacz szczegóły →</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+            <span class="text-6xl">🏭</span>
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-blue-600 font-semibold mb-2">FIRMA • GLIWICE</div>
+            <h3 class="font-bold text-lg mb-2">Hala produkcyjna</h3>
+            <p class="text-sm text-gray-600 mb-3">100 kWp + kompensacja<br/>Oszczędność: 68 tys. zł/rok</p>
+            <a href="/realizacje" class="text-blue-600 text-sm font-medium hover:underline">Zobacz szczegóły →</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+            <span class="text-6xl">🔋</span>
+          </div>
+          <div class="p-6">
+            <div class="text-xs text-blue-600 font-semibold mb-2">FIRMA • TYCHY</div>
+            <h3 class="font-bold text-lg mb-2">Peak shaving</h3>
+            <p class="text-sm text-gray-600 mb-3">50 kWp + magazyn 100 kWh<br/>-30% kosztów mocy zamówionej</p>
+            <a href="/realizacje" class="text-blue-600 text-sm font-medium hover:underline">Zobacz szczegóły →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/realizacje" class="inline-block px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition">
+          Zobacz wszystkie realizacje
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Najczęstsze pytania</h2>
+    
+    <div class="space-y-4">
+      <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+        <summary class="font-semibold text-lg cursor-pointer">Ile kosztuje instalacja fotowoltaiczna?</summary>
+        <div class="mt-4 text-gray-700">
+          <p>Dla domu: 4000–4500 zł/kWp (instalacja 5 kWp: ~22 000 zł). Z magazynem energii: od 40 000 zł.</p>
+          <p class="mt-2">Dla firm: 3800–4200 zł/kWp (ekonomia skali przy większych mocach).</p>
+          <p class="mt-2">Dokładna wycena po audycie energetycznym — przyjazd 0 zł* na Śląsku.</p>
+        </div>
+      </details>
+
+      <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+        <summary class="font-semibold text-lg cursor-pointer">Czy fotowoltaika się opłaca w 2025 roku?</summary>
+        <div class="mt-4 text-gray-700">
+          <p>Tak. Zwrot inwestycji: 6–9 lat dla domu, 4–7 lat dla firm (przy obecnych cenach energii 0,70–1,20 zł/kWh).</p>
+          <p class="mt-2">Panele pracują minimum 25 lat, co daje 16–19 lat czystych oszczędności.</p>
+        </div>
+      </details>
+
+      <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+        <summary class="font-semibold text-lg cursor-pointer">Jakie są dostępne dopłaty i programy wsparcia?</summary>
+        <div class="mt-4 text-gray-700">
+          <p>Dla domów: programy gminne i powiatowe (5000–10000 zł), ulga termomodernizacyjna.</p>
+          <p class="mt-2">Dla firm: programy NFOŚiGW, dotacje do 30% wartości inwestycji, leasing operacyjny.</p>
+          <p class="mt-2">Pomagamy w przygotowaniu wniosków i kompletowaniu dokumentacji.</p>
+        </div>
+      </details>
+
+      <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+        <summary class="font-semibold text-lg cursor-pointer">Czy magazyn energii (bateria) ma sens?</summary>
+        <div class="mt-4 text-gray-700">
+          <p>Tak, jeśli dużo energii zużywasz wieczorem/nocą. Magazyn zwiększa autokonsumpcję z 30–40% do 70–80% 
+          i daje zasilanie awaryjne przy zaniku prądu.</p>
+          <p class="mt-2">Dobór pojemności (kWh) po analizie profilu zużycia — oferujemy bezpłatny audyt.</p>
+        </div>
+      </details>
+
+      <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+        <summary class="font-semibold text-lg cursor-pointer">Jak długo trwa montaż?</summary>
+        <div class="mt-4 text-gray-700">
+          <p>Audyt i projekt: 3–7 dni. Montaż: 1–2 dni (dom), 3–7 dni (firma). Uruchomienie i zgłoszenie do OSD: 2–4 tygodnie.</p>
+          <p class="mt-2">Kompleksowy proces od wizyty do uruchomienia: 4–8 tygodni.</p>
+        </div>
+      </details>
+
+      <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+        <summary class="font-semibold text-lg cursor-pointer">Gdzie działacie?</summary>
+        <div class="mt-4 text-gray-700">
+          <p>Głównie na Śląsku (Katowice, Gliwice, Tychy, Dąbrowa Górnicza, Sosnowiec, Zabrze, Bielsko-Biała i okolice).</p>
+          <p class="mt-2">Realizujemy też projekty w całej Polsce (dla firm i większych instalacji).</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="text-center mt-8">
+      <a href="/faq" class="text-blue-600 font-medium hover:underline">
+        Zobacz wszystkie pytania i odpowiedzi →
+      </a>
+    </div>
+  </section>
+
+  <!-- Strony lokalne -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4">Działamy na Śląsku</h2>
+      <p class="text-center text-gray-600 mb-8">Audyt na miejscu w 48 godzin w Twoim mieście</p>
+      
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+        {MIASTA_SLASK.map(m => (
+          <a 
+            href={`/fotowoltaika/${m.slug}`} 
+            class="block p-3 bg-white rounded-lg text-center hover:shadow-md hover:text-blue-600 transition border border-gray-200"
+          >
+            {m.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog/Poradnik Teaser -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold mb-8">Poradnik i aktualności</h2>
+    
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="border rounded-lg p-6 hover:shadow-lg transition">
+        <div class="text-xs text-gray-500 mb-2">PORADNIK</div>
+        <h3 class="font-semibold text-lg mb-2">Jak przygotować dach do instalacji PV?</h3>
+        <p class="text-sm text-gray-600 mb-3">Stan dachu, orientacja, kąt nachylenia — sprawdź co jest ważne przed montażem paneli.</p>
+        <a href="/poradnik" class="text-blue-600 text-sm font-medium hover:underline">Czytaj więcej →</a>
+      </div>
+
+      <div class="border rounded-lg p-6 hover:shadow-lg transition">
+        <div class="text-xs text-gray-500 mb-2">PORADNIK</div>
+        <h3 class="font-semibold text-lg mb-2">Magazyn energii — kiedy się opłaca?</h3>
+        <p class="text-sm text-gray-600 mb-3">Analiza kosztów, zwrotu inwestycji i korzyści z baterii domowych w polskich warunkach.</p>
+        <a href="/poradnik" class="text-blue-600 text-sm font-medium hover:underline">Czytaj więcej →</a>
+      </div>
+
+      <div class="border rounded-lg p-6 hover:shadow-lg transition">
+        <div class="text-xs text-gray-500 mb-2">AKTUALNOŚCI</div>
+        <h3 class="font-semibold text-lg mb-2">Dopłaty do fotowoltaiki 2025</h3>
+        <p class="text-sm text-gray-600 mb-3">Aktualne programy dofinansowania dla domów i firm — jak ubiegać się o dotacje?</p>
+        <a href="/poradnik" class="text-blue-600 text-sm font-medium hover:underline">Czytaj więcej →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="bg-blue-600 text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Gotowy rozpocząć oszczędzanie?</h2>
+      <p class="text-xl mb-8">Umów bezpłatny audyt energetyczny. Przyjedziemy w 48 godzin.</p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/kontakt" class="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-bold hover:bg-gray-100 transition">
+          Umów wizytę
+        </a>
+        <a href="tel:+48123456789" class="inline-block px-8 py-4 bg-blue-800 text-white rounded-lg font-bold hover:bg-blue-900 transition border-2 border-white">
+          Zadzwoń: 123 456 789
+        </a>
+      </div>
+      
+      <p class="text-sm mt-6 opacity-90">Odpowiadamy w 2 godziny • Wizyty 7 dni w tygodniu • Śląsk i cała Polska</p>
+    </div>
+  </section>
+</BaseLayout>

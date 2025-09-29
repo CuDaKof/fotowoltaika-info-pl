@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { MIASTA_SLASK } from "../../data/miasta-slaskie";
+
+export function getStaticPaths() {
+  return MIASTA_SLASK.map(m => ({ params: { miasto: m.slug }, props: { miasto: m.name } }));
+}
+const { miasto } = Astro.props;
+const title = `Fotowoltaika ${miasto} — projekt, montaż, serwis`;
+const desc  = `Instalacje PV, magazyny energii i serwis w mieście ${miasto}. Audyt na miejscu 0 zł*, szybkie terminy, gwarancje.`;
+---
+<BaseLayout title={title} description={desc}>
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold mb-4">{title}</h1>
+    <p class="text-gray-700 mb-6">Projektujemy i montujemy instalacje fotowoltaiczne dla domów i firm w mieście {miasto}. Dobór mocy, magazyny energii, modernizacje i serwis.</p>
+    <h2 class="text-xl font-semibold mt-8 mb-3">Dlaczego z nami</h2>
+    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+      <li>Uprawnienia SEP, ubezpieczenie OC, realne referencje.</li>
+      <li>Sprzęt: Deye, Sofar, Huawei, JA/Longi.</li>
+      <li>Audyt na miejscu w 48h*, terminy montażu dopasowane do Ciebie.</li>
+    </ul>
+    <h2 class="text-xl font-semibold mt-8 mb-3">FAQ</h2>
+    <details class="mb-2"><summary>Jaka moc instalacji dla mojego domu?</summary><div class="pl-2 pt-1">Dobór mocy (kWp) po analizie zużycia i profilu dobowego.</div></details>
+    <details class="mb-2"><summary>Czy magazyn energii ma sens?</summary><div class="pl-2 pt-1">Zwiększa autokonsumpcję i daje zasilanie awaryjne — pojemność dobieramy do Twoich potrzeb.</div></details>
+    <div class="mt-8 flex gap-3">
+      <a href="/kontakt" class="px-4 py-2 rounded bg-black text-white">Umów wizytę w {miasto}</a>
+      <a href="/b2c" class="px-4 py-2 rounded border">Dla domu</a>
+      <a href="/b2b" class="px-4 py-2 rounded border">Dla firm</a>
+    </div>
+    <p class="text-xs text-gray-500 mt-4">*Audyt 0 zł dla kwalifikujących się zleceń.</p>
+  </section>
+</BaseLayout>

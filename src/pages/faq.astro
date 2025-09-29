@@ -1,0 +1,273 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="FAQ — najczęstsze pytania o fotowoltaikę" description="Odpowiedzi na najczęstsze pytania o instalacje fotowoltaiczne, magazyny energii, dopłaty, finansowanie.">
+  <section class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold mb-4">Najczęstsze pytania</h1>
+    <p class="text-xl text-gray-700 mb-12">
+      Odpowiedzi na pytania dotyczące fotowoltaiki, magazynów energii, dopłat i finansowania
+    </p>
+
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Instalacje fotowoltaiczne — podstawy</h2>
+      <div class="space-y-4">
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Jak działa instalacja fotowoltaiczna?</summary>
+          <div class="mt-4 text-gray-700">
+            <p>Panele fotowoltaiczne (PV) zamieniają światło słoneczne w prąd stały (DC). 
+            Falownik przekształca go na prąd zmienny (AC) 230V/400V, który możesz zużywać w domu lub firmie.</p>
+            <p class="mt-2">Nadwyżka energii w systemie net-billing trafia do sieci, za którą otrzymujesz 
+            zwrot w złotówkach na następnych fakturach (80% wartości sprzedanej energii).</p>
+          </div>
+        </details>
+
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Jaka moc instalacji PV dla mojego domu?</summary>
+          <div class="mt-4 text-gray-700">
+            <p>Dobór mocy (kWp) zależy od rocznego zużycia energii i profilu dobowego:</p>
+            <ul class="mt-2 space-y-1 list-disc pl-5">
+              <li>Zużycie 3000–4000 kWh/rok: 4–5 kWp</li>
+              <li>Zużycie 4000–6000 kWh/rok: 6–8 kWp</li>
+              <li>Zużycie powyżej 6000 kWh/rok: 8–10 kWp</li>
+            </ul>
+            <p class="mt-2">Oferujemy bezpłatny audyt energetyczny na miejscu — dokładnie obliczymy optymalną moc.</p>
+          </div>
+        </details>
+
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Ile kosztuje instalacja fotowoltaiczna?</summary>
+          <div class="mt-4 text-gray-700">
+            <p><strong>Dla domu:</strong> 4000–4500 zł/kWp (instalacja 5 kWp: ~22 000 zł). 
+            Z magazynem energii: od 40 000 zł.</p>
+            <p class="mt-2"><strong>Dla firm:</strong> 3800–4200 zł/kWp (ekonomia skali przy większych mocach).</p>
+            <p class="mt-2">Dokładna wycena po audycie — przyjazd 0 zł* na Śląsku. 
+            Zobacz <a href="/cennik-finansowanie" class="text-blue-600 underline">cennik i kalkulator</a>.</p>
+          </div>
+        </details>
+
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Czy fotowoltaika się opłaca w 2025 roku?</summary>
+          <div class="mt-4 text-gray-700">
+            <p>Tak. Zwrot inwestycji:</p>
+            <ul class="mt-2 space-y-1 list-disc pl-5">
+              <li>Dom bez magazynu: 6–9 lat</li>
+              <li>Dom z magazynem: 9–12 lat</li>
+              <li>Firma bez magazynu: 4–7 lat</li>
+              <li>Firma z peak shaving: 5–8 lat</li>
+            </ul>
+            <p class="mt-2">Przy obecnych cenach energii (0,70–1,20 zł/kWh) oszczędności rosną z roku na rok. 
+            Panele pracują minimum 25 lat, co daje 13–19 lat czystych oszczędności po zwrocie inwestycji.</p>
+          </div>
+        </details>
+
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Jak długo trwa montaż instalacji?</summary>
+          <div class="mt-4 text-gray-700">
+            <p><strong>Harmonogram typowej realizacji:</strong></p>
+            <ol class="mt-2 space-y-2 list-decimal pl-5">
+              <li>Audyt i projekt: 3–7 dni</li>
+              <li>Montaż: 1–2 dni (dom), 3–7 dni (firma)</li>
+              <li>Zgłoszenie do OSD: 2–4 tygodnie (czas rozpatrzenia)</li>
+              <li>Uruchomienie i podłączenie licznika: 1 dzień</li>
+            </ol>
+            <p class="mt-2">Kompleksowy proces od wizyty do uruchomienia: <strong>4–8 tygodni</strong>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Magazyny energii (baterie)</h2>
+      <div class="space-y-4">
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Czy magazyn energii (bateria) ma sens?</summary>
+          <div class="mt-4 text-gray-700">
+            <p>Magazyn zwiększa autokonsumpcję z 30–40% do 70–80% i daje zasilanie awaryjne przy zaniku prądu.</p>
+            <p class="mt-2"><strong>Opłaca się, jeśli:</strong></p>
+            <ul class="mt-2 space-y-1 list-disc pl-5">
+              <li>Dużo energii zużywasz wieczorem/nocą</li>
+              <li>Masz urządzenia o wysokim zużyciu (pompa ciepła, klimatyzacja)</li>
+              <li>Zależy Ci na zasilaniu awaryjnym (backup)</li>
+              <li>Planujesz ładować samochód elektryczny w nocy</li>
+            </ul>
+            <p class="mt-2">Dobór pojemności (kWh) po analizie profilu zużycia — oferujemy bezpłatny audyt.</p>
+          </div>
+        </details>
+
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Jaka pojemność magazynu energii wybrać?</summary>
+          <div class="mt-4 text-gray-700">
+            <p>Zasada: pojemność magazynu = nocne zużycie energii × 1,2</p>
+            <p class="mt-2"><strong>Przykłady:</strong></p>
+            <ul class="mt-2 space-y-1 list-disc pl-5">
+              <li>Nocne zużycie 8 kWh → magazyn 10 kWh</li>
+              <li>Nocne zużycie 12 kWh → magazyn 15 kWh</li>
+              <li>Dom z pompą ciepła → minimum 15 kWh</li>
+            </ul>
+            <p class="mt-2">Pomożemy dobrać optymalną pojemność po analizie faktur i profilu zużycia.</p>
+          </div>
+        </details>
+
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Czy można dodać magazyn do istniejącej instalacji PV?</summary>
+          <div class="mt-4 text-gray-700">
+            <p>Tak. Dwie opcje:</p>
+            <ol class="mt-2 space-y-2 list-decimal pl-5">
+              <li><strong>Wymiana falownika na hybrydowy</strong> — najefektywniejsze rozwiązanie, 
+              jeden falownik zarządza PV i baterią</li>
+              <li><strong>Dodanie falownika AC-coupled</strong> — pozostawienie starego falownika, 
+              dodanie oddzielnego falownika bateryjnego</li>
+            </ol>
+            <p class="mt-2">Wybór rozwiązania zależy od wieku i stanu obecnej instalacji. Prowadzimy audyt przed modernizacją.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Dopłaty i finansowanie</h2>
+      <div class="space-y-4">
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Jakie są dostępne dopłaty do fotowoltaiki w 2025?</summary>
+          <div class="mt-4 text-gray-700">
+            <p><strong>Dla domów:</strong></p>
+            <ul class="mt-2 space-y-1 list-disc pl-5">
+              <li>Programy gminne i powiatowe: 5 000 – 10 000 zł</li>
+              <li>Ulga termomodernizacyjna: odliczenie do 53 000 zł od podatku</li>
+            </ul>
+            <p class="mt-3"><strong>Dla firm:</strong></p>
+            <ul class="mt-2 space-y-1 list-disc pl-5">
+              <li>NFOŚiGW: dotacje do 30% wartości inwestycji</li>
+              <li>Programy unijne (FENG, RPO): dotacje dla MŚP</li>
+            </ul>
+            <p class="mt-2">Pomagamy w przygotowaniu wniosków. Zobacz więcej: 
+            <a href="/cennik-finansowanie#doplaty" class="text-blue-600 underline">dopłaty i programy wsparcia</a>.</p>
+          </div>
+        </details>
+
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Czy można sfinansować instalację PV leasingiem?</summary>
+          <div class="mt-4 text-gray-700">
+            <p>Tak, szczególnie dla firm. Leasing operacyjny to popularna forma finansowania:</p>
+            <ul class="mt-2 space-y-1 list-disc pl-5">
+              <li>Rata leasingowa często niższa od miesięcznych oszczędności</li>
+              <li>Bez obciążania cash-flow firmy</li>
+              <li>Koszty uzyskania przychodu (odliczenie VAT, raty w koszty)</li>
+              <li>Okres: 36–84 miesiące</li>
+            </ul>
+            <p class="mt-2">Współpracujemy z kilkoma firmami leasingowymi. Pomożemy wybrać najlepszą ofertę.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Dla firm</h2>
+      <div class="space-y-4">
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Co daje kompensacja mocy biernej?</summary>
+          <div class="mt-4 text-gray-700">
+            <p>Zmniejsza opłaty za energię bierną i poprawia współczynnik mocy (cos φ). 
+            Korzyści:</p>
+            <ul class="mt-2 space-y-1 list-disc pl-5">
+              <li>Eliminacja kar za przekroczenie tg φ > 0,4</li>
+              <li>Obniżenie strat mocy w instalacji</li>
+              <li>Zmniejszenie obciążenia transformatorów</li>
+              <li>Oszczędności: 5–15% kosztów energii rocznie</li>
+            </ul>
+            <p class="mt-2">Baterie kondensatorów lub dławiki dobieramy po audycie sieci elektrycznej i analizie faktur.</p>
+          </div>
+        </details>
+
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Peak shaving — jak to działa?</summary>
+          <div class="mt-4 text-gray-700">
+            <p>Magazyn energii ogranicza piki mocy pobieranej z sieci, co zmniejsza koszty mocy zamówionej:</p>
+            <ul class="mt-2 space-y-1 list-disc pl-5">
+              <li>System automatycznie rozładowuje baterię w szczycie zużycia</li>
+              <li>Ładuje w nocy lub gdy produkcja PV przewyższa zużycie</li>
+              <li>Zmniejsza szczyt mocy o 20–40%</li>
+              <li>Zwrot inwestycji: 5–8 lat</li>
+            </ul>
+            <p class="mt-2">Dobór magazynu po analizie profilu mocy (15-minutowe odczyty z licznika).</p>
+          </div>
+        </details>
+
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Jaki jest realny ROI instalacji PV dla firmy?</summary>
+          <div class="mt-4 text-gray-700">
+            <p>Przy obecnych cenach energii (0,70–1,20 zł/kWh) ROI wynosi <strong>4–7 lat</strong>.</p>
+            <p class="mt-2">Po tym czasie oszczędności to czysty zysk przez kolejne 18–20 lat żywotności instalacji.</p>
+            <p class="mt-2"><strong>Przykład:</strong> Instalacja 100 kWp, koszt 380 000 zł, 
+            oszczędność 68 000 zł/rok → ROI 5,6 lat.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Techniczne i formalne</h2>
+      <div class="space-y-4">
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Gdzie działacie?</summary>
+          <div class="mt-4 text-gray-700">
+            <p>Główny obszar: <strong>województwo śląskie</strong> — Katowice, Gliwice, Zabrze, Sosnowiec, 
+            Dąbrowa Górnicza, Tychy, Bielsko-Biała, Częstochowa i okolice.</p>
+            <p class="mt-2">Realizujemy też projekty dla firm w całej Polsce 
+            (szczególnie instalacje powyżej 50 kWp, kompensacja mocy, peak shaving).</p>
+          </div>
+        </details>
+
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Czy potrzebuję pozwolenia na budowę?</summary>
+          <div class="mt-4 text-gray-700">
+            <p><strong>Nie</strong> — instalacje do 50 kWp na budynkach nie wymagają pozwolenia.</p>
+            <p class="mt-2">Wymagane jest tylko zgłoszenie do OSD (operatora sieci dystrybucyjnej), 
+            które robimy za Ciebie w ramach usługi.</p>
+            <p class="mt-2">Instalacje naziemne powyżej 6,5 kW wymagają zgłoszenia do starostwa.</p>
+          </div>
+        </details>
+
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Jak wygląda gwarancja?</summary>
+          <div class="mt-4 text-gray-700">
+            <ul class="space-y-2">
+              <li><strong>Panele:</strong> 25 lat (gwarancja producenta na min. 80% mocy)</li>
+              <li><strong>Falowniki:</strong> 10 lat (możliwość przedłużenia do 20 lat)</li>
+              <li><strong>Magazyny energii:</strong> 10 lat lub 6000 cykli</li>
+              <li><strong>Montaż:</strong> 5 lat (szczelność dachu, konstrukcje)</li>
+              <li><strong>Gwarancja satysfakcji:</strong> Jeśli w pierwszym roku instalacja nie spełnia prognoz, wyrównujemy różnicę</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="bg-white border rounded-lg p-5 hover:shadow-md transition">
+          <summary class="font-semibold text-lg cursor-pointer">Czy panele działają zimą i w pochmurne dni?</summary>
+          <div class="mt-4 text-gray-700">
+            <p>Tak, ale z mniejszą wydajnością:</p>
+            <ul class="mt-2 space-y-1 list-disc pl-5">
+              <li>Słoneczny dzień zimą: 50–70% mocy lata</li>
+              <li>Pochmurny dzień: 10–25% mocy</li>
+              <li>Śnieg na panelach: znika samoistnie (panele są gładkie i lekko nachylone)</li>
+            </ul>
+            <p class="mt-2">Roczna produkcja w Polsce: ~900–1100 kWh/kWp 
+            (np. instalacja 5 kWp wyprodukuje 4500–5500 kWh/rok).</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <section class="bg-blue-600 text-white p-8 rounded-lg text-center">
+      <h3 class="text-2xl font-bold mb-4">Nie znalazłeś odpowiedzi?</h3>
+      <p class="text-lg mb-6">Skontaktuj się z nami. Odpowiadamy w 2 godziny (pon–pt 7:00–21:00).</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/kontakt" class="inline-block px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition">
+          Formularz kontaktowy
+        </a>
+        <a href="tel:+48123456789" class="inline-block px-6 py-3 bg-blue-800 text-white rounded-lg font-semibold hover:bg-blue-900 transition border-2 border-white">
+          Zadzwoń: 123 456 789
+        </a>
+      </div>
+    </section>
+  </section>
+</BaseLayout>

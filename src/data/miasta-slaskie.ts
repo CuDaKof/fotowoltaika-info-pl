@@ -1,0 +1,15 @@
+export const MIASTA_SLASK = [
+    { slug: 'katowice', name: 'Katowice' },
+    { slug: 'gliwice', name: 'Gliwice' },
+    { slug: 'dabrowa-gornicza', name: 'Dąbrowa Górnicza' },
+    { slug: 'tychy', name: 'Tychy' },
+    { slug: 'zabrze', name: 'Zabrze' },
+    { slug: 'jaworzno', name: 'Jaworzno' },
+    { slug: 'rybnik', name: 'Rybnik' },
+    { slug: 'sosnowiec', name: 'Sosnowiec' },
+    { slug: 'bedzin', name: 'Będzin' },
+    { slug: 'czestochowa', name: 'Częstochowa' },
+    { slug: 'siemianowice-slaskie', name: 'Siemianowice Śląskie' },
+    { slug: 'myslowice', name: 'Mysłowice' },
+    { slug: 'bielsko-biala', name: 'Bielsko-Biała' },
+  ];
