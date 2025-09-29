@@ -1,8 +1,8 @@
 ---
 // Komponent kalkulatora wstępnej wyceny fotowoltaiki
 ---
-<div class="bg-white rounded-lg border border-gray-200 p-8" id="kalkulator">
-  <h3 class="text-2xl font-light mb-6">Szybka wycena instalacji PV</h3>
+<div class="bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300" id="kalkulator">
+  <h3 class="text-2xl font-semibold mb-6">Szybka wycena instalacji PV</h3>
   <form id="calc-form" class="space-y-5">
     <div>
       <label for="consumption" class="block text-sm font-medium text-gray-900 mb-2">
@@ -16,7 +16,7 @@
         max="100000"
         value="4000"
         step="100"
-        class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition"
+        class="w-full border border-gray-200 rounded-lg px-4 py-3.5 shadow-sm focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all hover:shadow-md"
         required
       />
       <p class="text-xs text-gray-500 mt-1.5">Sprawdź na fakturze za rok lub średnia 300 kWh/mc</p>
@@ -27,7 +27,7 @@
       <select
         id="type"
         name="type"
-        class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition"
+        class="w-full border border-gray-200 rounded-lg px-4 py-3.5 shadow-sm focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all hover:shadow-md"
       >
         <option value="dom">Dom jednorodzinny</option>
         <option value="firma">Firma / działalność</option>
@@ -50,7 +50,7 @@
 
     <button
       type="submit"
-      class="w-full bg-blue-600 text-white font-medium py-3.5 hover:bg-blue-700 transition"
+      class="w-full bg-blue-600 text-white font-semibold py-4 rounded-lg shadow-lg hover:bg-blue-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
     >
       Oblicz wycenę
     </button>

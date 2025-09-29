@@ -16,37 +16,48 @@ import CalendarEmbed from "../components/CalendarEmbed.astro";
 
     <div class="grid md:grid-cols-2 gap-12 mb-16">
       <!-- Formularz kontaktowy -->
-      <div class="bg-white border border-gray-200 p-8">
-        <h2 class="text-2xl font-semibold mb-6">Wyślij wiadomość</h2>
+      <div class="bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+        <h2 class="text-2xl font-semibold mb-6">Bezpłatna wycena instalacji w 48h!</h2>
+        <p class="text-gray-600 mb-6 text-sm">
+          W celu umówienia się na pomiar lub sporządzenia wyceny skontaktuj się z nami telefonicznie lub drogą mailową. 
+          Wyceny kierowane mailem sporządzamy w ciągu 48 godzin. Zapraszamy również wszystkich zainteresowanych do wizyty 
+          bezpośrednio w naszej firmie.
+        </p>
         <ContactForm />
       </div>
 
       <!-- Dane kontaktowe -->
       <div>
-        <div class="bg-blue-50 border border-blue-100 p-8 mb-6">
-          <h2 class="text-2xl font-semibold mb-6">Umów spotkanie</h2>
-          <div class="space-y-4">
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-6 hover:shadow-xl transition-shadow duration-300">
+          <h2 class="text-2xl font-semibold mb-6">Jak prawidłowo opisać zapytanie?</h2>
+          <div class="space-y-5">
             <div>
-              <h3 class="font-medium text-gray-900 mb-2">📞 Telefon</h3>
-              <p class="text-lg text-blue-600 font-medium">123 456 789</p>
-              <p class="text-sm text-gray-600">Pon–Ndz: 7:00–21:00</p>
+              <h3 class="font-semibold text-blue-600 mb-2">1. Wymiary dachu</h3>
+              <p class="text-sm text-gray-700">Podaj wymiary dachu: szerokość, wysokość oraz kąt nachylenia. Następnie podaj orientację (północ, południe) i rodzaj pokrycia dachowego, zaznaczając ewentualne przeszkody.</p>
             </div>
             
             <div>
-              <h3 class="font-medium text-gray-900 mb-2">✉️ Email</h3>
-              <p class="text-lg text-blue-600 font-medium">cudakof@gmail.com</p>
+              <h3 class="font-semibold text-blue-600 mb-2">2. Opisz wnętrze instalacji - najlepiej narysuj prosty szkic</h3>
+              <p class="text-sm text-gray-700">Podeślij gotowy projekt w załączniku lub opisz dokładnie roczne zużycie energii, zainteresowanie magazynem energii oraz rodzaj obiektu (dom, firma, hala). Zaznacz czy planowane jest ocieplenie, wymiana dachu lub inne prace budowlane.</p>
             </div>
             
             <div>
-              <h3 class="font-medium text-gray-900 mb-2">📍 Obszar działania</h3>
-              <p class="text-gray-700">Śląskie i cała Polska</p>
-              <p class="text-sm text-gray-600">Audyt na miejscu w 48h</p>
+              <h3 class="font-semibold text-blue-600 mb-2">3. Rodzaj instalacji</h3>
+              <p class="text-sm text-gray-700">Czy interesuje Cię instalacja na dachu czy grunt? Jaka moc jest preferowana? Czy rozważasz instalację magazynu energii, pompy ciepła lub ładowarki do samochodu elektrycznego?</p>
+            </div>
+            
+            <div>
+              <h3 class="font-semibold text-blue-600 mb-2">4. Materiały, komponenty, elementy dodatkowe</h3>
+              <p class="text-sm text-gray-700">Instalacje fotowoltaiczne wykonujemy z najwyższej jakości komponentów dostępnych na rynku. Każda instalacja może być wyposażona w elementy dodatkowe takie jak: monitoring online, optymalizatory mocy, systemy zabezpieczeń lub inne akcesoria.</p>
             </div>
           </div>
         </div>
 
-        <div class="bg-gray-50 border border-gray-200 p-8">
-          <h3 class="font-semibold mb-4">💡 Co dalej?</h3>
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="font-semibold mb-4 flex items-center gap-2">
+            <span class="text-2xl">💡</span>
+            <span>Co dalej?</span>
+          </h3>
           <ol class="space-y-3 text-sm text-gray-700">
             <li class="flex gap-3">
               <span class="font-semibold">1.</span>
