@@ -1,5 +1,6 @@
 export interface Realizacja {
   id: number;
+  slug: string;
   typ: 'dom' | 'firma';
   lokalizacja: string;
   tytul: string;
@@ -35,6 +36,7 @@ export interface Realizacja {
 export const REALIZACJE: Realizacja[] = [
   {
     id: 1,
+    slug: 'dom-150m2-magazyn',
     typ: 'dom',
     lokalizacja: 'Katowice, Piotrowice',
     tytul: 'Dom 150 m² + magazyn energii',
@@ -81,6 +83,7 @@ export const REALIZACJE: Realizacja[] = [
   },
   {
     id: 2,
+    slug: 'hala-produkcyjna-2000m2',
     typ: 'firma',
     lokalizacja: 'Gliwice, strefa przemysłowa',
     tytul: 'Hala produkcyjna 2000 m²',
@@ -129,6 +132,7 @@ export const REALIZACJE: Realizacja[] = [
   },
   {
     id: 3,
+    slug: 'peak-shaving-carport',
     typ: 'firma',
     lokalizacja: 'Tychy, centrum logistyczne',
     tytul: 'Peak shaving + carport PV',
@@ -177,6 +181,7 @@ export const REALIZACJE: Realizacja[] = [
   },
   {
     id: 4,
+    slug: 'dom-100m2-prosumencka',
     typ: 'dom',
     lokalizacja: 'Sosnowiec, Zagórze',
     tytul: 'Dom 100 m² — prosumencka',
@@ -220,6 +225,7 @@ export const REALIZACJE: Realizacja[] = [
   },
   {
     id: 5,
+    slug: 'modernizacja-instalacji-magazyn',
     typ: 'firma',
     lokalizacja: 'Dąbrowa Górnicza, zakład',
     tytul: 'Modernizacja instalacji + magazyn',
@@ -268,6 +274,7 @@ export const REALIZACJE: Realizacja[] = [
   },
   {
     id: 6,
+    slug: 'dom-200m2-autarkia',
     typ: 'dom',
     lokalizacja: 'Bielsko-Biała, Mikuszowice',
     tytul: 'Dom 200 m² — autarkia energetyczna',
