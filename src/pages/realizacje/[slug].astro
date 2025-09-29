@@ -30,21 +30,25 @@ const { realizacja } = Astro.props;
   </div>
 
   <!-- Hero -->
-  <section class="py-12 bg-gradient-to-br {realizacja.gradient} text-white">
-    <div class="max-w-4xl mx-auto px-4">
+  <section class="relative py-12 overflow-hidden">
+    <!-- Gradient background with dark overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br {realizacja.gradient} opacity-20"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700"></div>
+    
+    <div class="relative max-w-4xl mx-auto px-4 text-white">
       <div class="flex items-center gap-3 mb-4">
-        <span class="px-3 py-1 bg-white/20 rounded-full text-sm font-medium uppercase">
+        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium uppercase">
           {realizacja.typ === 'dom' ? '🏠 Dom' : '🏭 Firma'}
         </span>
-        <span class="px-3 py-1 bg-white/20 rounded-full text-sm">
+        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm">
           📍 {realizacja.lokalizacja}
         </span>
       </div>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">{realizacja.tytul}</h1>
-      <div class="flex flex-wrap gap-4 text-lg">
-        <div>⚡ <strong>{realizacja.moc}</strong></div>
-        <div>💰 <strong>{realizacja.oszczednosc}</strong> oszczędności rocznie</div>
-        <div>🗓️ <strong>{realizacja.dataRealizacji}</strong></div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">{realizacja.tytul}</h1>
+      <div class="flex flex-wrap gap-4 text-lg text-blue-100">
+        <div>⚡ <strong class="text-white">{realizacja.moc}</strong></div>
+        <div>💰 <strong class="text-white">{realizacja.oszczednosc}</strong> oszczędności rocznie</div>
+        <div>🗓️ <strong class="text-white">{realizacja.dataRealizacji}</strong></div>
       </div>
     </div>
   </section>
