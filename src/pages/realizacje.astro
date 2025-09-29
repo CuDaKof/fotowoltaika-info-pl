@@ -1,74 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { REALIZACJE } from "../data/realizacje";
 
-const realizacje = [
-  {
-    id: 1,
-    typ: 'dom',
-    lokalizacja: 'Katowice, Piotrowice',
-    tytul: 'Dom 150 m² + magazyn energii',
-    moc: '8 kWp',
-    szczegoly: '20 paneli JA Solar 400W, falownik hybrydowy Deye 8kW, magazyn 10 kWh',
-    oszczednosc: '7 200 zł/rok',
-    opis: 'Dom jednorodzinny z pompą ciepła. Instalacja z magazynem energii zapewnia 75% autokonsumpcji i zasilanie awaryjne.',
-    gradient: 'from-orange-400 to-yellow-500'
-  },
-  {
-    id: 2,
-    typ: 'firma',
-    lokalizacja: 'Gliwice, strefa przemysłowa',
-    tytul: 'Hala produkcyjna 2000 m²',
-    moc: '100 kWp',
-    szczegoly: '250 paneli Longi 400W, falowniki Huawei 3×33kW, kompensacja mocy biernej',
-    oszczednosc: '68 000 zł/rok',
-    opis: 'Zakład produkcyjny z dużym zużyciem energii dziennym. Instalacja na dachu hali + kompensacja mocy biernej. ROI: 5,2 lat.',
-    gradient: 'from-blue-400 to-blue-600'
-  },
-  {
-    id: 3,
-    typ: 'firma',
-    lokalizacja: 'Tychy, centrum logistyczne',
-    tytul: 'Peak shaving + carport PV',
-    moc: '50 kWp + magazyn 100 kWh',
-    szczegoly: 'Magazyn Sofar 100kWh, system peak shaving, 6 stacji ładowania EV',
-    oszczednosc: '45 000 zł/rok',
-    opis: 'Centrum logistyczne z wysokimi szczytami mocy. Magazyn energii obniżył koszty mocy zamówionej o 30%. Carport PV z ładowarkami dla floty.',
-    gradient: 'from-green-400 to-green-600'
-  },
-  {
-    id: 4,
-    typ: 'dom',
-    lokalizacja: 'Sosnowiec, Zagórze',
-    tytul: 'Dom 100 m² — prosumencka',
-    moc: '5 kWp',
-    szczegoly: '12 paneli JA Solar 420W, falownik Sofar 5kW, system net-billing',
-    oszczednosc: '4 500 zł/rok',
-    opis: 'Podstawowa instalacja prosumencka bez magazynu. Pokrycie 65% zużycia energii w ciągu roku.',
-    gradient: 'from-yellow-400 to-orange-500'
-  },
-  {
-    id: 5,
-    typ: 'firma',
-    lokalizacja: 'Dąbrowa Górnicza, zakład',
-    tytul: 'Modernizacja instalacji + magazyn',
-    moc: '60 kWp + modernizacja',
-    szczegoly: 'Rozbudowa z 30 do 60 kWp, dodanie magazynu 50kWh, wymiana falowników',
-    oszczednosc: '52 000 zł/rok',
-    opis: 'Modernizacja 8-letniej instalacji. Wymiana starych falowników string na nowe hybrydowe + dodanie magazynu energii.',
-    gradient: 'from-purple-400 to-purple-600'
-  },
-  {
-    id: 6,
-    typ: 'dom',
-    lokalizacja: 'Bielsko-Biała, Mikuszowice',
-    tytul: 'Dom 200 m² — autarkia energetyczna',
-    moc: '10 kWp + magazyn 15 kWh',
-    szczegoly: '25 paneli Longi 400W, falownik Deye 10kW, baterie 15kWh, smart home',
-    oszczednosc: '9 800 zł/rok',
-    opis: 'Duży dom z basenem i klimatyzacją. Instalacja z dużym magazynem zapewnia 80% pokrycia rocznego zużycia energii.',
-    gradient: 'from-indigo-400 to-indigo-600'
-  },
-];
+const realizacje = REALIZACJE;
 ---
 <BaseLayout title="Realizacje — ponad 200 instalacji PV na Śląsku" description="Zrealizowane projekty fotowoltaiki dla domów i firm. Case studies, oszczędności, ROI.">
   <section class="max-w-6xl mx-auto px-4 py-12">
@@ -110,6 +44,151 @@ const realizacje = [
           </div>
         </div>
       ))}
+    </div>
+  </section>
+
+  <!-- Statystyki -->
+  <section class="bg-gradient-to-br from-blue-50 to-gray-50 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Nasza działalność w liczbach</h2>
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-5xl font-bold text-blue-600 mb-2">200+</div>
+          <div class="text-gray-700">Zrealizowanych instalacji PV</div>
+        </div>
+        <div>
+          <div class="text-5xl font-bold text-green-600 mb-2">12 MW</div>
+          <div class="text-gray-700">Łączna zainstalowana moc</div>
+        </div>
+        <div>
+          <div class="text-5xl font-bold text-orange-600 mb-2">7 600 t</div>
+          <div class="text-gray-700">Redukcja CO₂ rocznie</div>
+        </div>
+        <div>
+          <div class="text-5xl font-bold text-purple-600 mb-2">98%</div>
+          <div class="text-gray-700">Zadowolonych klientów</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proces realizacji -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-center mb-4">Jak przebiega realizacja?</h2>
+    <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+      Każdy projekt realizujemy według sprawdzonego procesu, który gwarantuje najwyższą jakość i terminowość
+    </p>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg border-2 border-gray-100 hover:border-blue-300 transition">
+        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl font-bold text-blue-600 mb-4">1</div>
+        <h3 class="text-xl font-bold mb-3">Audyt i projekt</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>✓ Bezpłatna wizyta na miejscu</li>
+          <li>✓ Pomiary i analiza dachu</li>
+          <li>✓ Analiza rachunków za energię</li>
+          <li>✓ Symulacja produkcji PVSyst</li>
+          <li>✓ Projekt techniczny i kosztorys</li>
+          <li>✓ Zgłoszenia do OSD</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border-2 border-gray-100 hover:border-blue-300 transition">
+        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl font-bold text-blue-600 mb-4">2</div>
+        <h3 class="text-xl font-bold mb-3">Montaż i uruchomienie</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>✓ Dostawa certyfikowanych komponentów</li>
+          <li>✓ Montaż przez doświadczony zespół</li>
+          <li>✓ Testy elektryczne i bezpieczeństwa</li>
+          <li>✓ Konfiguracja systemu monitoringu</li>
+          <li>✓ Uruchomienie i synchronizacja z siecią</li>
+          <li>✓ Przeszkolenie użytkownika</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border-2 border-gray-100 hover:border-blue-300 transition">
+        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl font-bold text-blue-600 mb-4">3</div>
+        <h3 class="text-xl font-bold mb-3">Odbiór i serwis</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>✓ Pełna dokumentacja powykonawcza</li>
+          <li>✓ Protokoły i certyfikaty</li>
+          <li>✓ Zgłoszenie do OSD i URE</li>
+          <li>✓ Gwarancje (panele 25 lat, falowniki 10 lat)</li>
+          <li>✓ Przeglądy i monitoring zdalny</li>
+          <li>✓ Serwis 24/7 w razie awarii</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+      <h3 class="font-bold text-lg mb-2">💡 Czas realizacji</h3>
+      <p class="text-gray-700">
+        <strong>Dom (do 10 kWp):</strong> 2-3 dni robocze montażu<br>
+        <strong>Firma (do 100 kWp):</strong> 1-2 tygodnie montażu<br>
+        <strong>Projekty złożone:</strong> indywidualny harmonogram<br>
+        <span class="text-sm text-gray-600 mt-2 block">*czas liczony od daty dostawy materiałów, nie licząc oczekiwania na zgody OSD</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Gwarancje i jakość -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Gwarancja jakości i bezpieczeństwa</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-lg text-center">
+          <div class="text-4xl mb-3">🏆</div>
+          <h3 class="font-bold mb-2">Uprawnienia SEP</h3>
+          <p class="text-sm text-gray-600">Certyfikowani elektrycy z uprawnieniami G1, G2, G3</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg text-center">
+          <div class="text-4xl mb-3">✅</div>
+          <h3 class="font-bold mb-2">Certyfikaty producentów</h3>
+          <p class="text-sm text-gray-600">Autoryzowani instalatorzy Huawei, Longi, Deye</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg text-center">
+          <div class="text-4xl mb-3">🛡️</div>
+          <h3 class="font-bold mb-2">Ubezpieczenie OC</h3>
+          <p class="text-sm text-gray-600">2 mln zł ochrony dla Twojej inwestycji</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg text-center">
+          <div class="text-4xl mb-3">📋</div>
+          <h3 class="font-bold mb-2">Gwarancja wykonania</h3>
+          <p class="text-sm text-gray-600">5 lat gwarancji na robociznę i montaż</p>
+        </div>
+      </div>
+
+      <div class="mt-12 max-w-3xl mx-auto">
+        <div class="bg-white p-8 rounded-lg border-2 border-green-200">
+          <h3 class="text-xl font-bold mb-4 text-center">Pakiet gwarancji</h3>
+          <div class="space-y-3 text-gray-700">
+            <div class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <div><strong>Panele fotowoltaiczne:</strong> 25 lat gwarancji na wydajność (min. 84,8% po 25 latach)</div>
+            </div>
+            <div class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <div><strong>Falowniki:</strong> 10 lat gwarancji producenta (możliwość rozszerzenia do 20 lat)</div>
+            </div>
+            <div class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <div><strong>Magazyny energii:</strong> 10 lat lub 6000 cykli (LFP), 10 lat lub 4000 cykli (NMC)</div>
+            </div>
+            <div class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <div><strong>Konstrukcja montażowa:</strong> 10 lat gwarancji na konstrukcję i szczelność dachu</div>
+            </div>
+            <div class="flex items-start">
+              <span class="text-green-600 mr-2">✓</span>
+              <div><strong>Robocizna i montaż:</strong> 5 lat gwarancji na prace instalacyjne</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
