@@ -4,6 +4,8 @@ import tailwind from "@astrojs/tailwind";
 // Astro configuration file
 // Optimized for Lighthouse 100/100
 export default defineConfig({
+  site: 'http://techno.pl',
+  base: '/test3',
   integrations: [tailwind()],
   output: "static",
   compressHTML: true,
