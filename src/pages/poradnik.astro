@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 import { ARTYKULY } from "../data/artykuly";
+import { KATEGORIE } from "../data/kategorie";
+
 const articles = ARTYKULY.map(a => ({
   kategoria: a.kategoria,
   tytul: a.tytul,
@@ -38,46 +39,13 @@ const articles = ARTYKULY.map(a => ({
     <div class="bg-gray-50 p-8 rounded-lg">
       <h2 class="text-2xl font-semibold mb-6">Kategorie poradnika</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a href={`${import.meta.env.BASE_URL}/poradnik/kategoria/podstawy`} class="block p-4 bg-white rounded-lg hover:shadow-md transition">
-          <div class="text-2xl mb-2">📚</div>
-          <h3 class="font-semibold">Podstawy</h3>
-          <p class="text-sm text-gray-600">Jak działa fotowoltaika</p>
-        </a>
-        <a href={`${import.meta.env.BASE_URL}/poradnik/kategoria/wybor`} class="block p-4 bg-white rounded-lg hover:shadow-md transition">
-          <div class="text-2xl mb-2">🔍</div>
-          <h3 class="font-semibold">Wybór instalacji</h3>
-          <p class="text-sm text-gray-600">Moc, panele, falowniki</p>
-        </a>
-        <a href={`${import.meta.env.BASE_URL}/poradnik/kategoria/magazyny`} class="block p-4 bg-white rounded-lg hover:shadow-md transition">
-          <div class="text-2xl mb-2">🔋</div>
-          <h3 class="font-semibold">Magazyny energii</h3>
-          <p class="text-sm text-gray-600">Baterie i autokonsumpcja</p>
-        </a>
-        <a href={`${import.meta.env.BASE_URL}/poradnik/kategoria/doplaty`} class="block p-4 bg-white rounded-lg hover:shadow-md transition">
-          <div class="text-2xl mb-2">💰</div>
-          <h3 class="font-semibold">Dopłaty</h3>
-          <p class="text-sm text-gray-600">Programy wsparcia 2025</p>
-        </a>
-        <a href={`${import.meta.env.BASE_URL}/poradnik/kategoria/montaz`} class="block p-4 bg-white rounded-lg hover:shadow-md transition">
-          <div class="text-2xl mb-2">🔧</div>
-          <h3 class="font-semibold">Montaż</h3>
-          <p class="text-sm text-gray-600">Przygotowanie i realizacja</p>
-        </a>
-        <a href={`${import.meta.env.BASE_URL}/poradnik/kategoria/dla-firm`} class="block p-4 bg-white rounded-lg hover:shadow-md transition">
-          <div class="text-2xl mb-2">🏭</div>
-          <h3 class="font-semibold">Dla firm</h3>
-          <p class="text-sm text-gray-600">Kompensacja, peak shaving</p>
-        </a>
-        <a href={`${import.meta.env.BASE_URL}/poradnik/kategoria/serwis`} class="block p-4 bg-white rounded-lg hover:shadow-md transition">
-          <div class="text-2xl mb-2">⚙️</div>
-          <h3 class="font-semibold">Serwis</h3>
-          <p class="text-sm text-gray-600">Utrzymanie i monitoring</p>
-        </a>
-        <a href={`${import.meta.env.BASE_URL}/poradnik/kategoria/technologie`} class="block p-4 bg-white rounded-lg hover:shadow-md transition">
-          <div class="text-2xl mb-2">🚀</div>
-          <h3 class="font-semibold">Technologie</h3>
-          <p class="text-sm text-gray-600">Nowinki i trendy</p>
-        </a>
+        {KATEGORIE.map(kat => (
+          <a href={`${import.meta.env.BASE_URL}/poradnik/kategoria/${kat.slug}/`} class="block p-4 bg-white rounded-lg hover:shadow-md transition">
+            <div class="text-2xl mb-2">{kat.ikona}</div>
+            <h3 class="font-semibold">{kat.nazwa}</h3>
+            <p class="text-sm text-gray-600">{kat.opis}</p>
+          </a>
+        ))}
       </div>
     </div>
   </section>

@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { KATEGORIE } from "../../../data/kategorie";
+import { ARTYKULY } from "../../../data/artykuly";
+
+export async function getStaticPaths() {
+  return KATEGORIE.map((kat) => ({
+    params: { kategoria: kat.slug },
+    props: { kategoria: kat },
+  }));
+}
+
+const { kategoria } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+// Filtruj artykuły dla tej kategorii
+const artykulyKategorii = ARTYKULY.filter(
+  (art) => art.kategoria === kategoria.nazwaWPliku
+);
+---
+
+<BaseLayout
+  title={`${kategoria.nazwa} — Poradnik fotowoltaiczny | fotowoltaika.info.pl`}
+  description={`${kategoria.opis}. Kompleksowy przewodnik: ${artykulyKategorii.map(a => a.tytul).slice(0, 3).join(', ')}.`}
+>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-4">
+    <div class="max-w-6xl mx-auto px-4">
+      <nav class="text-sm text-gray-600">
+        <a href={`${base}/`} class="hover:text-blue-600">Strona główna</a>
+        <span class="mx-2">/</span>
+        <a href={`${base}/poradnik/`} class="hover:text-blue-600">Poradnik</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900">{kategoria.nazwa}</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="text-6xl mb-4">{kategoria.ikona}</div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        {kategoria.nazwa}
+      </h1>
+      <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+        {kategoria.opis}
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <article class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Long Description -->
+    <div class="mb-12">
+      <div set:html={kategoria.longDesc} />
+    </div>
+
+    <!-- Articles Grid -->
+    <section>
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <span class="text-blue-600">📖</span>
+        Artykuły z tej kategorii
+        <span class="text-gray-400 text-xl font-normal">
+          ({artykulyKategorii.length})
+        </span>
+      </h2>
+
+      {artykulyKategorii.length === 0 ? (
+        <div class="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center">
+          <p class="text-gray-600">
+            Wkrótce dodamy artykuły w tej kategorii. Zapraszamy ponownie!
+          </p>
+        </div>
+      ) : (
+        <div class="grid md:grid-cols-2 gap-6">
+          {artykulyKategorii.map((art) => (
+            <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+              <div class="p-6">
+                <div class="text-xs text-blue-600 font-semibold uppercase mb-2">
+                  {art.kategoria}
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900 hover:text-blue-600 transition">
+                  <a href={`${base}/poradnik/${art.slug}/`}>{art.tytul}</a>
+                </h3>
+                <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                  {art.lead}
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-gray-500">📅 {art.data}</span>
+                  <a
+                    href={`${base}/poradnik/${art.slug}/`}
+                    class="text-blue-600 text-sm font-medium hover:underline"
+                  >
+                    Czytaj więcej →
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </section>
+
+    <!-- CTA -->
+    <section class="mt-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-lg p-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">Potrzebujesz pomocy w wyborze rozwiązania?</h2>
+      <p class="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
+        Nasi eksperci pomogą Ci dobrać optymalną instalację fotowoltaiczną do Twojego domu lub firmy. 
+        Bezpłatny audyt energetyczny i wycena w 48 godzin.
+      </p>
+      <a
+        href={`${base}/kontakt/`}
+        class="inline-block bg-blue-600 text-white font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-blue-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+      >
+        Umów bezpłatny audyt →
+      </a>
+    </section>
+
+    <!-- Other Categories -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-bold mb-6 text-center">Inne kategorie poradnika</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {KATEGORIE.filter((k) => k.slug !== kategoria.slug).map((k) => (
+          <a
+            href={`${base}/poradnik/kategoria/${k.slug}/`}
+            class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <div class="text-4xl mb-2">{k.ikona}</div>
+            <div class="font-semibold text-sm text-gray-900">{k.nazwa}</div>
+            <div class="text-xs text-gray-500 mt-1">{k.opis}</div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </article>
+</BaseLayout>
