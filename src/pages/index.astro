@@ -250,7 +250,7 @@ import { MIASTA_SLASK } from "../data/miasta-slaskie";
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
         {MIASTA_SLASK.map(m => (
           <a 
-            href={`/fotowoltaika/${m.slug}`} 
+            href={`${import.meta.env.BASE_URL}/fotowoltaika/${m.slug}`} 
             class="block p-3 bg-white rounded-lg text-center hover:shadow-md hover:text-blue-600 transition border border-gray-200"
           >
             {m.name}

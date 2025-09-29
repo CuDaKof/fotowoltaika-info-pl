@@ -22,12 +22,12 @@ const articles = ARTYKULY.map(a => ({
         <article class="bg-white border rounded-lg p-6 hover:shadow-lg transition">
           <div class="text-xs text-blue-600 font-semibold mb-2 uppercase">{art.kategoria}</div>
           <h2 class="text-xl font-bold mb-3 hover:text-blue-600">
-            <a href={`/poradnik/${art.slug}`}>{art.tytul}</a>
+            <a href={`${import.meta.env.BASE_URL}/poradnik/${art.slug}`}>{art.tytul}</a>
           </h2>
           <p class="text-sm text-gray-600 mb-4">{art.lead}</p>
           <div class="flex justify-between items-center text-sm">
             <span class="text-gray-500">{art.data}</span>
-            <a href={`/poradnik/${art.slug}`} class="text-blue-600 font-medium hover:underline">
+            <a href={`${import.meta.env.BASE_URL}/poradnik/${art.slug}`} class="text-blue-600 font-medium hover:underline">
               Czytaj →
             </a>
           </div>

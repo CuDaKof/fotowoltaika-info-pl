@@ -104,7 +104,7 @@ const realizacje = [
             </div>
             <p class="text-sm text-gray-600 mb-3">{r.szczegoly}</p>
             <p class="text-sm text-gray-700 mb-4">{r.opis}</p>
-            <a href={`/realizacje/${r.id}`} class="text-blue-600 font-medium hover:underline">
+            <a href={`${import.meta.env.BASE_URL}/realizacje/${r.id}`} class="text-blue-600 font-medium hover:underline">
               Zobacz szczegóły →
             </a>
           </div>

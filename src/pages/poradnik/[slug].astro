@@ -95,7 +95,7 @@ const { artykul } = Astro.props;
           .slice(0, 2)
           .map(related => (
             <a 
-              href={`/poradnik/${related.slug}`}
+              href={`${import.meta.env.BASE_URL}/poradnik/${related.slug}`}
               class="block p-6 border rounded-lg hover:shadow-lg transition"
             >
               <div class="text-xs text-blue-600 font-semibold uppercase mb-2">{related.kategoria}</div>
