@@ -17,7 +17,7 @@ const desc  = `${u.lead}`;
       {u.bullets.map(b => <li>{b}</li>)}
     </ul>
     <div class="mt-8 flex gap-3">
-      <a href="/kontakt" class="px-4 py-2 rounded bg-black text-white">Umów wizytę</a>
+      <a href={`${import.meta.env.BASE_URL}/kontakt`} class="px-4 py-2 rounded bg-black text-white">Umów wizytę</a>
       <a href={u.segment === 'b2b' ? '/b2b' : '/b2c'} class="px-4 py-2 rounded border">Wróć do oferty</a>
     </div>
   </section>

@@ -44,10 +44,10 @@ import { MIASTA_SLASK } from "../data/miasta-slaskie";
           </ul>
 
           <div class="flex flex-wrap gap-4">
-            <a href="/dla-domu" class="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg">
+            <a href={`${import.meta.env.BASE_URL}/dla-domu`} class="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg">
               Dla domu
             </a>
-            <a href="/dla-firm" class="inline-block px-8 py-4 bg-blue-800 text-white rounded-lg font-bold hover:bg-blue-900 transition border-2 border-white">
+            <a href={`${import.meta.env.BASE_URL}/dla-firm`} class="inline-block px-8 py-4 bg-blue-800 text-white rounded-lg font-bold hover:bg-blue-900 transition border-2 border-white">
               Dla firmy
             </a>
           </div>
@@ -93,7 +93,7 @@ import { MIASTA_SLASK } from "../data/miasta-slaskie";
             <span>Serwis, przeglądy, monitoring 24/7</span>
           </li>
         </ul>
-        <a href="/dla-domu" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
+        <a href={`${import.meta.env.BASE_URL}/dla-domu`} class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
           Zobacz ofertę dla domu →
         </a>
       </div>
@@ -118,7 +118,7 @@ import { MIASTA_SLASK } from "../data/miasta-slaskie";
             <span>Audyty energetyczne, pomiary, protokoły</span>
           </li>
         </ul>
-        <a href="/dla-firm" class="inline-block px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition">
+        <a href={`${import.meta.env.BASE_URL}/dla-firm`} class="inline-block px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition">
           Zobacz ofertę dla firm →
         </a>
       </div>
@@ -140,7 +140,7 @@ import { MIASTA_SLASK } from "../data/miasta-slaskie";
             <div class="text-xs text-blue-600 font-semibold mb-2">DOM • KATOWICE</div>
             <h3 class="font-bold text-lg mb-2">Dom 150 m² + magazyn</h3>
             <p class="text-sm text-gray-600 mb-3">8 kWp + bateria 10 kWh<br/>Oszczędność: 7200 zł/rok</p>
-            <a href="/realizacje" class="text-blue-600 text-sm font-medium hover:underline">Zobacz szczegóły →</a>
+            <a href={`${import.meta.env.BASE_URL}/realizacje`} class="text-blue-600 text-sm font-medium hover:underline">Zobacz szczegóły →</a>
           </div>
         </div>
 
@@ -152,7 +152,7 @@ import { MIASTA_SLASK } from "../data/miasta-slaskie";
             <div class="text-xs text-blue-600 font-semibold mb-2">FIRMA • GLIWICE</div>
             <h3 class="font-bold text-lg mb-2">Hala produkcyjna</h3>
             <p class="text-sm text-gray-600 mb-3">100 kWp + kompensacja<br/>Oszczędność: 68 tys. zł/rok</p>
-            <a href="/realizacje" class="text-blue-600 text-sm font-medium hover:underline">Zobacz szczegóły →</a>
+            <a href={`${import.meta.env.BASE_URL}/realizacje`} class="text-blue-600 text-sm font-medium hover:underline">Zobacz szczegóły →</a>
           </div>
         </div>
 
@@ -164,13 +164,13 @@ import { MIASTA_SLASK } from "../data/miasta-slaskie";
             <div class="text-xs text-blue-600 font-semibold mb-2">FIRMA • TYCHY</div>
             <h3 class="font-bold text-lg mb-2">Peak shaving</h3>
             <p class="text-sm text-gray-600 mb-3">50 kWp + magazyn 100 kWh<br/>-30% kosztów mocy zamówionej</p>
-            <a href="/realizacje" class="text-blue-600 text-sm font-medium hover:underline">Zobacz szczegóły →</a>
+            <a href={`${import.meta.env.BASE_URL}/realizacje`} class="text-blue-600 text-sm font-medium hover:underline">Zobacz szczegóły →</a>
           </div>
         </div>
       </div>
 
       <div class="text-center mt-8">
-        <a href="/realizacje" class="inline-block px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition">
+        <a href={`${import.meta.env.BASE_URL}/realizacje`} class="inline-block px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition">
           Zobacz wszystkie realizacje
         </a>
       </div>
@@ -235,7 +235,7 @@ import { MIASTA_SLASK } from "../data/miasta-slaskie";
     </div>
 
     <div class="text-center mt-8">
-      <a href="/faq" class="text-blue-600 font-medium hover:underline">
+      <a href={`${import.meta.env.BASE_URL}/faq`} class="text-blue-600 font-medium hover:underline">
         Zobacz wszystkie pytania i odpowiedzi →
       </a>
     </div>
@@ -269,21 +269,21 @@ import { MIASTA_SLASK } from "../data/miasta-slaskie";
         <div class="text-xs text-gray-500 mb-2">PORADNIK</div>
         <h3 class="font-semibold text-lg mb-2">Jak przygotować dach do instalacji PV?</h3>
         <p class="text-sm text-gray-600 mb-3">Stan dachu, orientacja, kąt nachylenia — sprawdź co jest ważne przed montażem paneli.</p>
-        <a href="/poradnik" class="text-blue-600 text-sm font-medium hover:underline">Czytaj więcej →</a>
+        <a href={`${import.meta.env.BASE_URL}/poradnik`} class="text-blue-600 text-sm font-medium hover:underline">Czytaj więcej →</a>
       </div>
 
       <div class="border rounded-lg p-6 hover:shadow-lg transition">
         <div class="text-xs text-gray-500 mb-2">PORADNIK</div>
         <h3 class="font-semibold text-lg mb-2">Magazyn energii — kiedy się opłaca?</h3>
         <p class="text-sm text-gray-600 mb-3">Analiza kosztów, zwrotu inwestycji i korzyści z baterii domowych w polskich warunkach.</p>
-        <a href="/poradnik" class="text-blue-600 text-sm font-medium hover:underline">Czytaj więcej →</a>
+        <a href={`${import.meta.env.BASE_URL}/poradnik`} class="text-blue-600 text-sm font-medium hover:underline">Czytaj więcej →</a>
       </div>
 
       <div class="border rounded-lg p-6 hover:shadow-lg transition">
         <div class="text-xs text-gray-500 mb-2">AKTUALNOŚCI</div>
         <h3 class="font-semibold text-lg mb-2">Dopłaty do fotowoltaiki 2025</h3>
         <p class="text-sm text-gray-600 mb-3">Aktualne programy dofinansowania dla domów i firm — jak ubiegać się o dotacje?</p>
-        <a href="/poradnik" class="text-blue-600 text-sm font-medium hover:underline">Czytaj więcej →</a>
+        <a href={`${import.meta.env.BASE_URL}/poradnik`} class="text-blue-600 text-sm font-medium hover:underline">Czytaj więcej →</a>
       </div>
     </div>
   </section>
@@ -295,7 +295,7 @@ import { MIASTA_SLASK } from "../data/miasta-slaskie";
       <p class="text-xl mb-8">Umów bezpłatny audyt energetyczny. Przyjedziemy w 48 godzin.</p>
       
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/kontakt" class="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-bold hover:bg-gray-100 transition">
+        <a href={`${import.meta.env.BASE_URL}/kontakt`} class="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-bold hover:bg-gray-100 transition">
           Umów wizytę
         </a>
         <a href="tel:+48123456789" class="inline-block px-8 py-4 bg-blue-800 text-white rounded-lg font-bold hover:bg-blue-900 transition border-2 border-white">

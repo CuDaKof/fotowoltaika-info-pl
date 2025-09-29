@@ -23,9 +23,9 @@ const desc  = `Instalacje PV, magazyny energii i serwis w mieście ${miasto}. Au
     <details class="mb-2"><summary>Jaka moc instalacji dla mojego domu?</summary><div class="pl-2 pt-1">Dobór mocy (kWp) po analizie zużycia i profilu dobowego.</div></details>
     <details class="mb-2"><summary>Czy magazyn energii ma sens?</summary><div class="pl-2 pt-1">Zwiększa autokonsumpcję i daje zasilanie awaryjne — pojemność dobieramy do Twoich potrzeb.</div></details>
     <div class="mt-8 flex gap-3">
-      <a href="/kontakt" class="px-4 py-2 rounded bg-black text-white">Umów wizytę w {miasto}</a>
-      <a href="/b2c" class="px-4 py-2 rounded border">Dla domu</a>
-      <a href="/b2b" class="px-4 py-2 rounded border">Dla firm</a>
+      <a href={`${import.meta.env.BASE_URL}/kontakt`} class="px-4 py-2 rounded bg-black text-white">Umów wizytę w {miasto}</a>
+      <a href={`${import.meta.env.BASE_URL}/b2c`} class="px-4 py-2 rounded border">Dla domu</a>
+      <a href={`${import.meta.env.BASE_URL}/b2b`} class="px-4 py-2 rounded border">Dla firm</a>
     </div>
     <p class="text-xs text-gray-500 mt-4">*Audyt 0 zł dla kwalifikujących się zleceń.</p>
   </section>

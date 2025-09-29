@@ -10,10 +10,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         Baterie LFP z gwarancją 10 lat.
       </p>
       <div class="flex flex-wrap gap-4">
-        <a href="/kontakt" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
+        <a href={`${import.meta.env.BASE_URL}/kontakt`} class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
           Umów bezpłatny audyt
         </a>
-        <a href="/cennik-finansowanie" class="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition">
+        <a href={`${import.meta.env.BASE_URL}/cennik-finansowanie`} class="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition">
           Kalkulator wyceny
         </a>
       </div>
@@ -164,7 +164,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-4">Chcesz zwiększyć niezależność energetyczną?</h2>
       <p class="text-xl mb-6">Umów audyt. Dobierzemy optymalną pojemność magazynu dla Twojego domu.</p>
-      <a href="/kontakt" class="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-bold hover:bg-gray-100 transition">
+      <a href={`${import.meta.env.BASE_URL}/kontakt`} class="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-bold hover:bg-gray-100 transition">
         Umów audyt 0 zł
       </a>
     </div>

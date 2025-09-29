@@ -106,7 +106,7 @@ const { artykul } = Astro.props;
         }
       </div>
       <div class="mt-6 text-center">
-        <a href="/poradnik" class="text-blue-600 font-medium hover:underline">
+        <a href={`${import.meta.env.BASE_URL}/poradnik`} class="text-blue-600 font-medium hover:underline">
           ← Wróć do wszystkich artykułów
         </a>
       </div>
