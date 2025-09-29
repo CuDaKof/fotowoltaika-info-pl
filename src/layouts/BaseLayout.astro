@@ -22,8 +22,10 @@ const base = import.meta.env.BASE_URL;
     <meta name="description" content={description} />
     
     <!-- Performance optimizations -->
-    <meta name="theme-color" content="#004f8c" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     
     <!-- SEO -->
     <link rel="canonical" href={`https://fotowoltaika.info.pl${Astro.url.pathname}`} />
@@ -58,82 +60,84 @@ const base = import.meta.env.BASE_URL;
     }
     </script>
   </head>
-  <body class="font-sans antialiased text-gray-800 bg-gray-50">
-    <header class="sticky top-0 z-50 bg-white shadow">
-      <div class="container mx-auto flex justify-between items-center py-4 px-6">
-        <a href={`${base}/`} class="text-xl font-semibold text-primary-dark">fotowoltaika.info.pl</a>
-        <nav class="hidden md:flex space-x-4">
-          <a href={`${base}/dla-domu`} class="text-gray-700 hover:text-primary-dark">Dla domu</a>
-          <a href={`${base}/dla-firm`} class="text-gray-700 hover:text-primary-dark">Dla firm</a>
-          <a href={`${base}/realizacje`} class="text-gray-700 hover:text-primary-dark">Realizacje</a>
-          <a href={`${base}/cennik-finansowanie`} class="text-gray-700 hover:text-primary-dark">Cennik</a>
-          <a href={`${base}/poradnik`} class="text-gray-700 hover:text-primary-dark">Poradnik</a>
-          <a href={`${base}/kontakt`} class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Kontakt</a>
+  <body class="font-sans antialiased text-gray-900 bg-white">
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+      <div class="container mx-auto flex justify-between items-center py-6 px-6">
+        <a href={`${base}/`} class="text-2xl font-light tracking-wide text-black hover:text-gray-700 transition">
+          fotowoltaika<span class="font-semibold">.info.pl</span>
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href={`${base}/dla-domu`} class="text-sm font-medium text-gray-700 hover:text-black transition">Dla domu</a>
+          <a href={`${base}/dla-firm`} class="text-sm font-medium text-gray-700 hover:text-black transition">Dla firm</a>
+          <a href={`${base}/realizacje`} class="text-sm font-medium text-gray-700 hover:text-black transition">Realizacje</a>
+          <a href={`${base}/cennik-finansowanie`} class="text-sm font-medium text-gray-700 hover:text-black transition">Cennik</a>
+          <a href={`${base}/poradnik`} class="text-sm font-medium text-gray-700 hover:text-black transition">Poradnik</a>
+          <a href={`${base}/kontakt`} class="px-6 py-2.5 bg-black text-white text-sm font-medium hover:bg-gray-800 transition">Kontakt</a>
         </nav>
         <!-- Mobile menu button -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700">
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-black">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
       <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 py-4 px-6">
-        <nav class="flex flex-col space-y-3">
-          <a href={`${base}/dla-domu`} class="text-gray-700 hover:text-primary-dark">Dla domu</a>
-          <a href={`${base}/dla-firm`} class="text-gray-700 hover:text-primary-dark">Dla firm</a>
-          <a href={`${base}/realizacje`} class="text-gray-700 hover:text-primary-dark">Realizacje</a>
-          <a href={`${base}/cennik-finansowanie`} class="text-gray-700 hover:text-primary-dark">Cennik</a>
-          <a href={`${base}/poradnik`} class="text-gray-700 hover:text-primary-dark">Poradnik</a>
-          <a href={`${base}/kontakt`} class="text-gray-700 hover:text-primary-dark">Kontakt</a>
+      <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 py-4 px-6 bg-gray-50">
+        <nav class="flex flex-col space-y-4">
+          <a href={`${base}/dla-domu`} class="text-sm font-medium text-gray-700 hover:text-black">Dla domu</a>
+          <a href={`${base}/dla-firm`} class="text-sm font-medium text-gray-700 hover:text-black">Dla firm</a>
+          <a href={`${base}/realizacje`} class="text-sm font-medium text-gray-700 hover:text-black">Realizacje</a>
+          <a href={`${base}/cennik-finansowanie`} class="text-sm font-medium text-gray-700 hover:text-black">Cennik</a>
+          <a href={`${base}/poradnik`} class="text-sm font-medium text-gray-700 hover:text-black">Poradnik</a>
+          <a href={`${base}/kontakt`} class="text-sm font-medium text-gray-700 hover:text-black">Kontakt</a>
         </nav>
       </div>
     </header>
     <main>
       <slot />
     </main>
-    <footer class="border-t border-gray-200 mt-12 py-8 bg-gray-50">
+    <footer class="border-t border-gray-200 mt-20 py-12 bg-gray-50">
       <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-4 gap-8 mb-6">
+        <div class="grid md:grid-cols-4 gap-12 mb-8">
           <div>
-            <h4 class="font-semibold mb-3">Dla domu</h4>
-            <ul class="space-y-2 text-sm text-gray-600">
-              <li><a href={`${base}/dla-domu/fotowoltaika`} class="hover:text-primary-dark">Fotowoltaika</a></li>
-              <li><a href={`${base}/dla-domu/magazyn-energii`} class="hover:text-primary-dark">Magazyny energii</a></li>
-              <li><a href={`${base}/dla-domu/modernizacja-pv`} class="hover:text-primary-dark">Modernizacja PV</a></li>
+            <h4 class="font-semibold mb-4 text-black">Dla domu</h4>
+            <ul class="space-y-3 text-sm text-gray-600">
+              <li><a href={`${base}/dla-domu/fotowoltaika`} class="hover:text-black transition">Fotowoltaika</a></li>
+              <li><a href={`${base}/dla-domu/magazyn-energii`} class="hover:text-black transition">Magazyny energii</a></li>
+              <li><a href={`${base}/dla-domu/modernizacja-pv`} class="hover:text-black transition">Modernizacja PV</a></li>
             </ul>
           </div>
           <div>
-            <h4 class="font-semibold mb-3">Dla firm</h4>
-            <ul class="space-y-2 text-sm text-gray-600">
-              <li><a href={`${base}/dla-firm/fotowoltaika`} class="hover:text-primary-dark">Fotowoltaika</a></li>
-              <li><a href={`${base}/dla-firm/kompensacja-mocy-biernej`} class="hover:text-primary-dark">Kompensacja mocy</a></li>
-              <li><a href={`${base}/dla-firm/magazyny-energii`} class="hover:text-primary-dark">Peak shaving</a></li>
+            <h4 class="font-semibold mb-4 text-black">Dla firm</h4>
+            <ul class="space-y-3 text-sm text-gray-600">
+              <li><a href={`${base}/dla-firm/fotowoltaika`} class="hover:text-black transition">Fotowoltaika</a></li>
+              <li><a href={`${base}/dla-firm/kompensacja-mocy-biernej`} class="hover:text-black transition">Kompensacja mocy</a></li>
+              <li><a href={`${base}/dla-firm/magazyny-energii`} class="hover:text-black transition">Peak shaving</a></li>
             </ul>
           </div>
           <div>
-            <h4 class="font-semibold mb-3">Informacje</h4>
-            <ul class="space-y-2 text-sm text-gray-600">
-              <li><a href={`${base}/o-nas`} class="hover:text-primary-dark">O nas</a></li>
-              <li><a href={`${base}/realizacje`} class="hover:text-primary-dark">Realizacje</a></li>
-              <li><a href={`${base}/faq`} class="hover:text-primary-dark">FAQ</a></li>
-              <li><a href={`${base}/poradnik`} class="hover:text-primary-dark">Poradnik</a></li>
+            <h4 class="font-semibold mb-4 text-black">Informacje</h4>
+            <ul class="space-y-3 text-sm text-gray-600">
+              <li><a href={`${base}/o-nas`} class="hover:text-black transition">O nas</a></li>
+              <li><a href={`${base}/realizacje`} class="hover:text-black transition">Realizacje</a></li>
+              <li><a href={`${base}/faq`} class="hover:text-black transition">FAQ</a></li>
+              <li><a href={`${base}/poradnik`} class="hover:text-black transition">Poradnik</a></li>
             </ul>
           </div>
           <div>
-            <h4 class="font-semibold mb-3">Kontakt</h4>
-            <ul class="space-y-2 text-sm text-gray-600">
+            <h4 class="font-semibold mb-4 text-black">Kontakt</h4>
+            <ul class="space-y-3 text-sm text-gray-600">
               <li>Tel: 123 456 789</li>
               <li>Email: kontakt@fotowoltaika.info.pl</li>
               <li>Pon–Ndz: 7:00–21:00</li>
             </ul>
           </div>
         </div>
-        <div class="border-t border-gray-200 pt-4 text-sm text-gray-500 flex flex-wrap justify-between">
-          <p>© {new Date().getFullYear()} fotowoltaika.info.pl. Wszelkie prawa zastrzeżone.</p>
-          <div class="space-x-4">
-            <a href={`${base}/polityka-prywatnosci`} class="hover:text-primary-dark">Polityka prywatności</a>
-            <a href={`${base}/regulamin`} class="hover:text-primary-dark">Regulamin</a>
+        <div class="border-t border-gray-200 pt-6 text-sm text-gray-500 flex flex-wrap justify-between items-center">
+          <p>© {new Date().getFullYear()} fotowoltaika.info.pl</p>
+          <div class="space-x-6">
+            <a href={`${base}/polityka-prywatnosci`} class="hover:text-black transition">Polityka prywatności</a>
+            <a href={`${base}/regulamin`} class="hover:text-black transition">Regulamin</a>
           </div>
         </div>
       </div>

@@ -1,11 +1,11 @@
 ---
 // Komponent kalkulatora wstępnej wyceny fotowoltaiki
 ---
-<div class="bg-white rounded-lg shadow-xl p-6" id="kalkulator">
-  <h3 class="text-2xl font-bold mb-4">Szybka wycena instalacji PV</h3>
-  <form id="calc-form" class="space-y-4">
+<div class="bg-white rounded-lg border border-gray-200 p-8" id="kalkulator">
+  <h3 class="text-2xl font-light mb-6">Szybka wycena instalacji PV</h3>
+  <form id="calc-form" class="space-y-5">
     <div>
-      <label for="consumption" class="block text-sm font-medium text-gray-700 mb-1">
+      <label for="consumption" class="block text-sm font-medium text-black mb-2">
         Roczne zużycie energii (kWh)
       </label>
       <input
@@ -16,18 +16,18 @@
         max="100000"
         value="4000"
         step="100"
-        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"
+        class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-black transition"
         required
       />
-      <p class="text-xs text-gray-500 mt-1">Sprawdź na fakturze za rok lub średnia 300 kWh/mc</p>
+      <p class="text-xs text-gray-500 mt-1.5">Sprawdź na fakturze za rok lub średnia 300 kWh/mc</p>
     </div>
     
     <div>
-      <label for="type" class="block text-sm font-medium text-gray-700 mb-1">Rodzaj obiektu</label>
+      <label for="type" class="block text-sm font-medium text-black mb-2">Rodzaj obiektu</label>
       <select
         id="type"
         name="type"
-        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"
+        class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:border-black transition"
       >
         <option value="dom">Dom jednorodzinny</option>
         <option value="firma">Firma / działalność</option>
@@ -35,13 +35,13 @@
     </div>
 
     <div>
-      <label class="block text-sm font-medium text-gray-700 mb-2">Magazyn energii?</label>
-      <div class="flex gap-4">
-        <label class="flex items-center">
+      <label class="block text-sm font-medium text-black mb-2">Magazyn energii?</label>
+      <div class="flex gap-6">
+        <label class="flex items-center cursor-pointer">
           <input type="radio" name="battery" value="0" checked class="mr-2" />
           <span class="text-sm">Bez magazynu</span>
         </label>
-        <label class="flex items-center">
+        <label class="flex items-center cursor-pointer">
           <input type="radio" name="battery" value="1" class="mr-2" />
           <span class="text-sm">Z magazynem</span>
         </label>
@@ -50,51 +50,51 @@
 
     <button
       type="submit"
-      class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition"
+      class="w-full bg-black text-white font-medium py-3.5 hover:bg-gray-800 transition"
     >
       Oblicz wycenę
     </button>
   </form>
 
   <div id="calc-result" class="mt-6 hidden">
-    <div class="border-t pt-4">
-      <h4 class="font-semibold mb-3">Wstępna wycena:</h4>
-      <div class="bg-blue-50 p-4 rounded-lg">
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-gray-700">Zalecana moc:</span>
-          <span class="font-bold text-xl" id="result-power">—</span>
+    <div class="border-t pt-6">
+      <h4 class="font-medium mb-4 text-black">Wstępna wycena:</h4>
+      <div class="bg-gray-50 p-6 border border-gray-200">
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-gray-600">Zalecana moc:</span>
+          <span class="font-semibold text-xl" id="result-power">—</span>
         </div>
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-gray-700">Liczba paneli:</span>
-          <span class="font-bold" id="result-panels">—</span>
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-gray-600">Liczba paneli:</span>
+          <span class="font-semibold" id="result-panels">—</span>
         </div>
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-gray-700">Roczna produkcja:</span>
-          <span class="font-bold" id="result-production">—</span>
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-gray-600">Roczna produkcja:</span>
+          <span class="font-semibold" id="result-production">—</span>
         </div>
-        <div class="border-t border-blue-200 mt-3 pt-3">
+        <div class="border-t border-gray-300 mt-4 pt-4">
           <div class="flex justify-between items-center">
-            <span class="text-gray-700">Szacunkowy koszt:</span>
-            <span class="font-bold text-2xl text-blue-600" id="result-price">—</span>
+            <span class="text-gray-600">Szacunkowy koszt:</span>
+            <span class="font-bold text-2xl text-black" id="result-price">—</span>
           </div>
-          <p class="text-xs text-gray-600 mt-2">
+          <p class="text-xs text-gray-500 mt-2">
             *Cena orientacyjna z montażem. Dokładna wycena po audycie.
           </p>
         </div>
-        <div class="mt-4 pt-3 border-t border-blue-200">
-          <div class="flex justify-between items-center text-sm">
-            <span class="text-gray-700">Oszczędność rocznie:</span>
-            <span class="font-semibold text-green-600" id="result-savings">—</span>
+        <div class="mt-4 pt-4 border-t border-gray-300">
+          <div class="flex justify-between items-center text-sm mb-2">
+            <span class="text-gray-600">Oszczędność rocznie:</span>
+            <span class="font-semibold text-black" id="result-savings">—</span>
           </div>
-          <div class="flex justify-between items-center text-sm mt-1">
-            <span class="text-gray-700">Zwrot inwestycji (ROI):</span>
+          <div class="flex justify-between items-center text-sm">
+            <span class="text-gray-600">Zwrot inwestycji (ROI):</span>
             <span class="font-semibold" id="result-roi">—</span>
           </div>
         </div>
       </div>
       <a
         href={`${import.meta.env.BASE_URL}/kontakt`}
-        class="block w-full text-center bg-black text-white font-semibold py-3 rounded-lg mt-4 hover:bg-gray-800 transition"
+        class="block w-full text-center bg-black text-white font-medium py-3.5 mt-4 hover:bg-gray-800 transition"
       >
         Umów dokładny audyt 0 zł
       </a>
