@@ -1,0 +1,450 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout 
+  title="Srbija i obnovljiva energija — potencijal i perspektive razvoja | fotowoltaika.info.pl"
+  description="Otkrijte ogroman potencijal Srbije u oblasti obnovljive energije: fotovoltaika, energija vetra, hidroenergija. Analiza tržišta, investicije i budućnost zelene energije na Balkanu."
+>
+  <!-- Language Switcher -->
+  <div class="bg-gradient-to-r from-blue-600 to-blue-800 border-b border-blue-700">
+    <div class="max-w-6xl mx-auto px-4 py-2 flex justify-end items-center gap-3">
+      <span class="text-white text-sm">Jezik:</span>
+      <a 
+        href={`${base}/serbia-oze/`}
+        class="px-4 py-1.5 bg-white/20 text-white text-sm font-medium rounded hover:bg-white/30 transition"
+      >
+        🇵🇱 Polski
+      </a>
+      <span class="px-4 py-1.5 bg-white text-blue-600 text-sm font-bold rounded shadow">
+        🇷🇸 Srpski
+      </span>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="relative max-w-6xl mx-auto px-4 text-center">
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <span class="text-7xl">🇷🇸</span>
+        <span class="text-7xl">☀️</span>
+        <span class="text-7xl">💚</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">
+        Srbija — novi lider obnovljive energije na Balkanu
+      </h1>
+      <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+        Od tradicije ugljenične energetike do zelene budućnosti. Otkrijte fascinantnu energetsku transformaciju zemlje sa ogromnim OIE potencijalom.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <article class="max-w-5xl mx-auto px-4 py-16">
+    
+    <!-- Intro -->
+    <div class="prose prose-lg max-w-none mb-16">
+      <p class="text-xl text-gray-700 leading-relaxed mb-6">
+        Srbija, zemlja smeštena u srcu Balkana, trenutno se nalazi u prelomnom trenutku svoje energetske istorije. 
+        Nakon decenija zavisnosti od termoelektrana na ugalj i hidroelektrana, Srbija otkriva svoj ogroman potencijal 
+        u oblasti modernih izvora obnovljive energije — pre svega fotovoltaike i energije vetra.
+      </p>
+      <p class="text-xl text-gray-700 leading-relaxed">
+        Suočena sa zahtevima Evropske unije za klimatsku neutralnost i rastućim troškovima energije, Srbija 
+        postaje jedno od najobećavajućih OIE tržišta u regionu. Hajde da vidimo koje su njene šanse i izazovi.
+      </p>
+    </div>
+
+    <!-- Section 1: Energetska istorija -->
+    <section class="mb-16">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="text-5xl">🏭</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Energetska istorija Srbije — od uglja do budućnosti
+        </h2>
+      </div>
+
+      <div class="bg-gray-50 border-l-4 border-blue-600 p-8 rounded-r-lg mb-8">
+        <h3 class="text-2xl font-bold mb-4 text-blue-900">Ključne činjenice o energetici Srbije (2024)</h3>
+        <ul class="space-y-3 text-gray-800">
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600 font-bold">⚡</span>
+            <span><strong>Ukupna instalirana snaga:</strong> ~7,4 GW (2024)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600 font-bold">🔥</span>
+            <span><strong>Energija iz uglja:</strong> ~70% proizvodnje električne energije</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600 font-bold">💧</span>
+            <span><strong>Hidroenergija:</strong> ~28% proizvodnje (uglavnom velike elektrane na Dunavu i Drini)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600 font-bold">☀️</span>
+            <span><strong>Sunčeva + energija vetra:</strong> ~2% (ali dinamičan rast!)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600 font-bold">🎯</span>
+            <span><strong>Cilj za 2030:</strong> 40% energije iz obnovljivih izvora</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p>
+          <strong>Era uglja (1945-2010):</strong> Nakon Drugog svetskog rata, Srbija (tada deo Jugoslavije) intenzivno je 
+          razvijala energetiku na ugalj. Glavne elektrane: Nikola Tesla (Obrenovac), Kostolac, Kolubara — i danas čine 
+          okosnicu srpske energetike. Lignit iz rudnika u Kolubari i Kostolcu obezbeđivao je niske troškove proizvodnje 
+          energije, ali i visoke emisije CO₂.
+        </p>
+        <p>
+          <strong>Zlatno doba hidroenergije (1960-1990):</strong> Izgradnja velikih hidroelektrana na Dunavu (Đerdap I i II — 
+          zajednički sa Rumunijom, ukupna snaga 2,4 GW) i na rekama Drina, Lim i Uvac. Hidroenergija i danas čini oko 30% 
+          proizvodnje energije i ključna je za stabilnost sistema.
+        </p>
+        <p>
+          <strong>Kriza i transformacija (2000-danas):</strong> Zastarele termoelektrane, ekološki pritisak EU, skuplje 
+          dozvole za emisiju CO₂ — sve je to primoralo Srbiju da ozbiljno razmisli o OIE. Prve vetroelektrane pojavile 
+          su se 2015. godine, a fotovoltaični bum počeo je 2020. godine.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Solarni potencijal -->
+    <section class="mb-16">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="text-5xl">☀️</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Ogroman sunčev potencijal Srbije
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-gradient-to-br from-yellow-50 to-orange-50 border border-yellow-200 rounded-xl p-6">
+          <h3 class="text-xl font-bold mb-4 text-orange-900">☀️ Insolacija u Srbiji</h3>
+          <ul class="space-y-2 text-gray-800">
+            <li><strong>1.500-2.200 sunčanih sati godišnje</strong></li>
+            <li><strong>Zračenje:</strong> 1.200-1.550 kWh/m²/god</li>
+            <li><strong>Najbolji regioni:</strong> jug (Niš, Vranje, Leskovac)</li>
+            <li><strong>Poređenje:</strong> slično južnoj Nemačkoj ili Austriji</li>
+          </ul>
+        </div>
+
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-6">
+          <h3 class="text-xl font-bold mb-4 text-blue-900">📊 Proizvodnja iz FN instalacija</h3>
+          <ul class="space-y-2 text-gray-800">
+            <li><strong>Instalacija 1 kWp:</strong> 1.200-1.400 kWh/god</li>
+            <li><strong>Kuća (6 kWp):</strong> 7.200-8.400 kWh/god</li>
+            <li><strong>Farma 1 MWp:</strong> 1.200-1.400 MWh/god</li>
+            <li><strong>Povraćaj investicije:</strong> 5-8 godina (kuća), 6-10 godina (farma)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p>
+          <strong>Zašto je Srbija idealna za fotovoltaiku?</strong>
+        </p>
+        <ul class="list-disc list-inside space-y-3 ml-4">
+          <li>
+            <strong>Kontinentalna klima sa toplim letima:</strong> Temperature 30-40°C u julu/augustu obezbeđuju 
+            maksimalnu proizvodnju energije na vrhuncu sezone.
+          </li>
+          <li>
+            <strong>Velike površine neiskorišćenog poljoprivrednog zemljišta:</strong> Posebno u južnoj Srbiji (Vojvodina, 
+            okolina Niša) — idealno za solarne farme.
+          </li>
+          <li>
+            <strong>Niska gustina naseljenosti:</strong> Izvan Beograda i nekoliko većih gradova — mnogo prostora za 
+            prizemne instalacije bez sukoba sa stanovništvom.
+          </li>
+          <li>
+            <strong>Vladina podrška:</strong> Feed-in tarife za instalacije do 500 kW, bespovratna sredstva za domaćinstva, 
+            poreske olakšice za investitore.
+          </li>
+        </ul>
+
+        <div class="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-lg mt-8">
+          <h4 class="font-bold text-lg mb-3 text-green-900">🎯 Cilj Srbije za 2030:</h4>
+          <p class="text-gray-800 mb-2">
+            <strong>2 GW instalirane snage u fotovoltaici</strong> (trenutno ~100 MW)
+          </p>
+          <p class="text-sm text-gray-700">
+            Ako se cilj ostvari, fotovoltaika će činiti ~15% ukupne instalirane snage u zemlji 
+            i ~10% proizvodnje električne energije.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Energija vetra -->
+    <section class="mb-16">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="text-5xl">💨</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Energija vetra — drugi stub OIE u Srbiji
+        </h2>
+      </div>
+
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p>
+          Energija vetra razvija se u Srbiji od 2015. godine, kada je puštena u rad prva vetroelektrana Košava (69 MW) 
+          u regionu Banat (severoistočna Srbija). Naziv farme nije slučajan — Košava je jak, hladan vetar koji duva 
+          iz Karpata i redovno pogađa ovaj region.
+        </p>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+          <h3 class="text-xl font-bold mb-4 text-blue-900">🌪️ Ključne vetroelektrane u Srbiji (2024)</h3>
+          <ul class="space-y-3 text-gray-800">
+            <li><strong>Košava (2015):</strong> 69 MW — prva velika farma</li>
+            <li><strong>Čibuk 1 (2019):</strong> 158 MW — najveća u Srbiji</li>
+            <li><strong>La Piccolina (2023):</strong> 108 MW — nova generacija</li>
+            <li><strong>Ukupna snaga (2024):</strong> ~400 MW</li>
+            <li><strong>U izgradnji/planirano:</strong> ~600 MW (2025-2027)</li>
+          </ul>
+        </div>
+
+        <p>
+          <strong>Najbolje lokacije za energiju vetra u Srbiji:</strong>
+        </p>
+        <ul class="list-disc list-inside space-y-3 ml-4">
+          <li>
+            <strong>Banat (severni istok):</strong> Vetar Košava, prosečna brzina 6-7 m/s, gusta mreža vetroelektrana.
+          </li>
+          <li>
+            <strong>Stara planina (istok):</strong> Planinski lanac na granici sa Bugarskom, visine 1.000-2.000 m n.v., 
+            planinski vetrovi do 8 m/s.
+          </li>
+          <li>
+            <strong>Srem i Fruška Gora (Vojvodina):</strong> Uzvišenja visine 300-500 m, dobri vetroviti uslovi.
+          </li>
+        </ul>
+
+        <div class="bg-amber-50 border-l-4 border-amber-600 p-6 rounded-r-lg mt-8">
+          <h4 class="font-bold text-lg mb-3 text-amber-900">⚠️ Izazovi za energiju vetra</h4>
+          <ul class="space-y-2 text-gray-800 text-base">
+            <li>• Lokalni protesti (buka, uticaj na ptice, pejzaž)</li>
+            <li>• Nedostatak odgovarajuće mrežne infrastrukture u udaljenim regionima</li>
+            <li>• Konkurencija sa fotovoltaikom (jeftinija, manje kontroverzna)</li>
+            <li>• Potreba za proširenjem prenosne mreže (troškovi 200-500 miliona evra)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Hidroenergija -->
+    <section class="mb-16">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="text-5xl">💧</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Hidroenergija — istorijski stub energetike
+        </h2>
+      </div>
+
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p>
+          Srbija je oduvek bila hidroenergetska sila. Hidroelektrana Đerdap I (Iron Gate I) na Dunavu, puštena u rad 1972. 
+          godine, najveća je hidroelektrana na Dunavu i jedna od najvećih u Evropi (snaga: 1.026 MW). Zajedno sa Đerdap II 
+          (270 MW) čine kompleks koji proizvodi ~12% električne energije zemlje.
+        </p>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+          <h3 class="text-xl font-bold mb-4 text-blue-900">🏔️ Najvažnije hidroelektrane u Srbiji</h3>
+          <ul class="space-y-3 text-gray-800">
+            <li><strong>Đerdap I i II (Dunav):</strong> 1.296 MW — energetski div</li>
+            <li><strong>Bajina Bašta (Drina):</strong> 368 MW —reverzibilna</li>
+            <li><strong>Pirot (Nišava):</strong> 80 MW</li>
+            <li><strong>Ukupna hidro snaga:</strong> ~2,8 GW (~38% ukupne snage)</li>
+            <li><strong>Godišnja proizvodnja:</strong> ~10-12 TWh (zavisno od padavina)</li>
+          </ul>
+        </div>
+
+        <p>
+          <strong>Potencijal malih hidroelektrana (MHE):</strong> Srbija planira izgradnju 100-150 malih hidroelektrana 
+          (snaga: 1-10 MW svaka) na planinskim rekama. Ukupan potencijal: ~500 MW. Međutim, ovi projekti nailaze 
+          na jak otpor ekologa (pretnja riječnim ekosistemima).
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Investicije -->
+    <section class="mb-16">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="text-5xl">💰</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Najveće investicije u OIE u Srbiji
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white border-2 border-green-200 rounded-xl p-6 hover:shadow-xl transition">
+          <div class="text-3xl mb-3">🇦🇪</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">Masdar (UAE) — 1 GW fotovoltaike</h3>
+          <p class="text-gray-700 text-base mb-3">
+            Emiratska kompanija Masdar najavila je 2023. godine investiciju u solarne farme ukupne snage 1 GW. Vrednost: 
+            ~800 miliona evra. Lokacije: Vojvodina, okolina Niša.
+          </p>
+          <span class="text-sm text-green-600 font-semibold">Status: U izgradnji (2024-2026)</span>
+        </div>
+
+        <div class="bg-white border-2 border-blue-200 rounded-xl p-6 hover:shadow-xl transition">
+          <div class="text-3xl mb-3">🇨🇳</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">China Energy Engineering — vetroelektrane</h3>
+          <p class="text-gray-700 text-base mb-3">
+            Kineska kompanija CEEC planira izgradnju 3 vetroelektrane u regionu Stara planina (ukupno 300 MW). Vrednost: 
+            ~400 miliona evra.
+          </p>
+          <span class="text-sm text-blue-600 font-semibold">Status: Dozvole (start 2025)</span>
+        </div>
+
+        <div class="bg-white border-2 border-purple-200 rounded-xl p-6 hover:shadow-xl transition">
+          <div class="text-3xl mb-3">🇪🇺</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">MK Fintel Wind — najveća farma na Balkanu</h3>
+          <p class="text-gray-700 text-base mb-3">
+            Srpsko-nemačka kompanija planira izgradnju vetroelektrane od 500 MW u Banatu (najveća u regionu). Vrednost: 
+            ~650 miliona evra.
+          </p>
+          <span class="text-sm text-purple-600 font-semibold">Status: Planiranje (2025-2028)</span>
+        </div>
+
+        <div class="bg-white border-2 border-orange-200 rounded-xl p-6 hover:shadow-xl transition">
+          <div class="text-3xl mb-3">🏠</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">Program "Moja Energija"</h3>
+          <p class="text-gray-700 text-base mb-3">
+            Vladiprogram subvencija za FN instalacije za domaćinstva (do 10 kWp). Subvencija: 50% troškova (maks 
+            5.000 evra). Budžet: 50 miliona evra godišnje.
+          </p>
+          <span class="text-sm text-orange-600 font-semibold">Status: Aktivan (2023-2027)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Izazovi -->
+    <section class="mb-16">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="text-5xl">⚠️</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Izazovi na putu ka zelenoj energiji
+        </h2>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-red-50 border-l-4 border-red-600 p-6 rounded-r-lg">
+          <h3 class="font-bold text-xl mb-3 text-red-900">1. Zastarela elektroenergetska mreža</h3>
+          <p class="text-gray-800">
+            Prenosna mreža u Srbiji potiče iz 70-ih i 80-ih godina XX veka. Nedostaju pametni brojači, zastareli su 
+            transformatori, nestabilnost napona. Potrebna modernizacija za ~2-3 milijarde evra (2025-2035).
+          </p>
+        </div>
+
+        <div class="bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg">
+          <h3 class="font-bold text-xl mb-3 text-orange-900">2. Zavisnost od uglja</h3>
+          <p class="text-gray-800">
+            Termoelektrane obezbeđuju 70% energije i zapošljavaju ~30.000 ljudi (direktno i indirektno). 
+            Zatvaranje elektrana nije samo tehnički problem, već prvenstveno društveni. Potrebna je pravična 
+            transformacija (just transition) — prekvalifikacija radnika, nova radna mesta u OIE.
+          </p>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-600 p-6 rounded-r-lg">
+          <h3 class="font-bold text-xl mb-3 text-yellow-900">3. Nedostatak skladišta energije</h3>
+          <p class="text-gray-800">
+            Fotovoltaika i vetroelektrane proizvode energiju neravnomerno. Nedostatak skladišta energije (baterije, 
+            reverzibilne hidroelektrane) ograničava mogućnost potpunog korišćenja OIE. Srbija planira izgradnju 
+            reverzibilnih hidroelektrana (ukupno 1 GW) i baterijskih skladišta (500 MW).
+          </p>
+        </div>
+
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg">
+          <h3 class="font-bold text-xl mb-3 text-blue-900">4. Birokratija i korupcija</h3>
+          <p class="text-gray-800">
+            Duge procedure za izdavanje dozvola (2-5 godina), nejasni propisi, korupcija na lokalnom nivou. Potrebna 
+            je reforma administracije i pojednostavljenje procedura (Srbija radi na tome u okviru procesa pristupanja EU).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Budućnost -->
+    <section class="mb-16">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="text-5xl">🚀</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Budućnost — Srbija kao zeleni hab Balkana?
+        </h2>
+      </div>
+
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p>
+          Srbija ima ogroman potencijal da postane lider obnovljive energije na Balkanu. Ključevi uspeha:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-xl p-6">
+            <h3 class="text-xl font-bold mb-4 text-green-900">✅ Konkurentske prednosti</h3>
+            <ul class="space-y-2 text-gray-800 text-base">
+              <li>• Odlični sunčevi uslovi (jug zemlje)</li>
+              <li>• Velike površine za solarne i vetro farme</li>
+              <li>• Niski troškovi rada i zemljišta</li>
+              <li>• Vladina podrška (subvencije, feed-in tarife)</li>
+              <li>• Blizina EU tržišta (izvoz energije)</li>
+              <li>• Tradicija hidroenergije</li>
+            </ul>
+          </div>
+
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-6">
+            <h3 class="text-xl font-bold mb-4 text-blue-900">🎯 Ciljevi za 2030</h3>
+            <ul class="space-y-2 text-gray-800 text-base">
+              <li>• <strong>40% energije iz OIE</strong> (trenutno ~30%)</li>
+              <li>• <strong>2 GW fotovoltaike</strong> (trenutno ~100 MW)</li>
+              <li>• <strong>1 GW energije vetra</strong> (trenutno ~400 MW)</li>
+              <li>• <strong>Modernizacija mreže</strong> (pametna mreža)</li>
+              <li>• <strong>1 GW skladišta energije</strong></li>
+              <li>• <strong>Zatvaranje 50% termoelektrana</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-300 rounded-xl p-8 mt-8">
+          <h3 class="text-2xl font-bold mb-4 text-purple-900 flex items-center gap-3">
+            <span>💡</span>
+            <span>Vizija 2050: Srbija kao izvoznik zelene energije</span>
+          </h3>
+          <p class="text-gray-800 leading-relaxed mb-4">
+            Ako Srbija ostvari svoje planove, do 2050. godine može postati izvoznik čiste energije u Zapadnu Evropu. 
+            Potencijal: 10-15 GW OIE (fotovoltaika + vetar + hidro), proizvodnja 20-25 TWh godišnje (pri domaćoj 
+            potrošnji od ~35 TWh). Višak energije može se izvoziti u Mađarsku, Rumuniju, Bugarsku i dalje u EU.
+          </p>
+          <p class="text-gray-800 leading-relaxed">
+            Srbija može biti deo evropskog „supergrid" — transevropske energetske mreže koja povezuje OIE sa celog 
+            kontinenta. To nije samo biznis, već i geopolitička strategija — energetska nezavisnost i integracija sa EU.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-2xl shadow-2xl p-12 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Zainteresovani za investiciju u OIE na Balkanu?
+      </h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+        Nudimo savetovanje, analize tržišta i kompleksnu podršku za fotovoltaične projekte u Poljskoj i inostranstvu. 
+        Kontaktirajte nas da saznate o investicionim mogućnostima.
+      </p>
+      <a 
+        href={`${base}/kontakt/`}
+        class="inline-block bg-white text-blue-600 font-bold py-4 px-10 rounded-lg shadow-lg hover:bg-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-200 text-lg"
+      >
+        Zakažite konsultaciju →
+      </a>
+    </section>
+
+  </article>
+</BaseLayout>
